@@ -1,0 +1,12 @@
+# JUPYTER DEPENDENCIES
+
+IRkernel  # r kernel.
+pillar
+
+# R DEPENDENCIES
+
+sjstats  # common statistics.
+lme4  # linear and mixed models.
+emmeans  # estimated marginal means.
+lmerTest  # Welch-Satterthwaite effective degrees of freedom analysis.
+pbkrtest  # Kenward-Roger approach for t test.

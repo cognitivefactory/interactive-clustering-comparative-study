@@ -1,5 +1,7 @@
 # Interactive Clustering Comparative Study
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5648255.svg)](https://doi.org/10.5281/zenodo.5648255)
+
 A comparative study of [cognitivefactory-interactive-clustering](https://github.com/cognitivefactory/interactive-clustering/) functionalities on NLP datasets.
 
 

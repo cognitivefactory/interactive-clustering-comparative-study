@@ -11,7 +11,9 @@ __pycache__/
 *.Rhistory
 
 # experiments
-experiments/*/
+*/experiments/*/
+*.zip
+*.tar.gz
 
 # build
 *.egg-info/
@@ -30,6 +32,7 @@ site/
 
 # various
 poetry.lock
+pdm.lock
 
 # editors (you should put this in your global gitignore though)
 # git config --global core.excludesfile ~/.gitignore_global
@@ -37,4 +40,4 @@ poetry.lock
 .vscode/
 
 # temporary analysis
-TEMP/
+.temp/

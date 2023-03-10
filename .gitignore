@@ -15,6 +15,10 @@ __pycache__/
 *.zip
 *.tar.gz
 
+# datasets
+datasets/.temp/
+datasets/*/
+
 # build
 *.egg-info/
 dist/
@@ -41,3 +45,7 @@ pdm.lock
 
 # temporary analysis
 .temp/
+*.temp/
+
+# credentials
+credentials.py

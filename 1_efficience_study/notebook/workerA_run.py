@@ -2,7 +2,7 @@
 
 """
 * Name:         workerA_run
-* Description:  Worker to run an interactive clustering convergence study experiment.
+* Description:  Worker to run an interactive clustering efficience study experiment.
 * Author:       Erwan Schild
 * Created:      24/05/2021
 * Licence:      CeCILL (https://cecill.info/licences.fr.html)
@@ -46,18 +46,18 @@ def experiment_run(
     parameters: Dict[str, Any],
 ) -> int:
     """
-    A worker to run an interactive clustering convergence study experiment.
+    A worker to run an interactive clustering efficience study experiment.
     An experiment is aimed at iteratively and automatically annotated an NLP dataset with the interactive clustering methodology.
     At each iteration, the process samples data to annotate, annotates constraints on these data according to the groudtruth, then applies a constrained clustering.
     The loop ends when all possible combination of data are annotated with constraints, or when maximum iteration is reached.
-    Then, go to the next step of the convergence study to evaluate results and convergence speed of this experiment.
+    Then, go to the next step of the efficience study to evaluate results and convergence speed of this experiment.
     Usage note:
         - Parameters have to contain the path experiment to run. A dictionary is needed to get parameters in `multiprocessing.Pool.imap_unordered` call.
         - The path to the environment has to be formatted by the notebook `1_Initialize_convergence_experiments.ipynb`.
-        - The notebook `2_Run_and_evaluate_convergence.ipynb` launch this script for all defined experiment environments with the librairy `multiprocessing`.
+        - The notebook `2_Run_until_convergence_and_evaluate_efficience.ipynb` launch this script for all defined experiment environments with the librairy `multiprocessing`.
 
     Args:
-        parameters (Dict[str, Any]): A dictionary that contains several parameters. Three keys are expected in this dictionary: the experiment environment path (`"ENV_PATH"`), the maximum iteration of interactive clustering (`"MAX_ITER"`).
+        parameters (Dict[str, Any]): A dictionary that contains several parameters. Two keys are expected in this dictionary: the experiment environment path (`"ENV_PATH"`), the maximum iteration of interactive clustering (`"MAX_ITER"`).
 
     Returns:
         int: Return `0` when finish.

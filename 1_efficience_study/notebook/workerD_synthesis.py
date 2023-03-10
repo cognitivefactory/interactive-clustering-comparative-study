@@ -2,7 +2,7 @@
 
 """
 * Name:         workerD_synthesis
-* Description:  Worker to synthesize results of interactive clustering convergence study experiments in an CSV file.
+* Description:  Worker to synthesize results of interactive clustering efficience study experiments in an CSV file.
 * Author:       Erwan Schild
 * Created:      24/05/2021
 * Licence:      CeCILL (https://cecill.info/licences.fr.html)

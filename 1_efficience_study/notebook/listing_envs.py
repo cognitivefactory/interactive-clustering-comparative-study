@@ -2,7 +2,7 @@
 
 """
 * Name:         listing_envs
-* Description:  A set of method to list created interactive clustering convergence study environments.
+* Description:  A set of method to list created interactive clustering efficience study environments.
 * Author:       Erwan Schild
 * Created:      24/05/2021
 * Licence:      CeCILL (https://cecill.info/licences.fr.html)

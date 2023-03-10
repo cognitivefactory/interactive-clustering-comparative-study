@@ -2,7 +2,7 @@
 
 """
 * Name:         workerC_overview
-* Description:  Worker to make overviews of interactive clustering convergence study experiments.
+* Description:  Worker to make overviews of interactive clustering efficience study experiments.
 * Author:       Erwan Schild
 * Created:      24/05/2021
 * Licence:      CeCILL (https://cecill.info/licences.fr.html)

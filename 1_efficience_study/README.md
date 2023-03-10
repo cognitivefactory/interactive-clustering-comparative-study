@@ -1,6 +1,6 @@
-# Interactive Clustering : Convergence Study
+# Interactive Clustering : Efficience Study
 
-The main goal of this study is to **confirm the technical efficacité** of the method by verifying its convergence and by finding the best implementation.
+The main goal of this study is to **confirm the technical efficience** of the method by verifying its convergence to a ground truth and by finding the best implementation to increase convergence speed.
 
 
 ## Hypotheses

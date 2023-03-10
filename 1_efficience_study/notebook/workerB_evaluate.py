@@ -2,7 +2,7 @@
 
 """
 * Name:         workerB_evaluation
-* Description:  Worker to evaluate an interactive clustering convergence study experiment.
+* Description:  Worker to evaluate an interactive clustering efficience study experiment.
 * Author:       Erwan Schild
 * Created:      24/05/2021
 * Licence:      CeCILL (https://cecill.info/licences.fr.html)
@@ -34,15 +34,15 @@ def experiment_evaluate(
     parameters: Dict[str, Any],
 ):
     """
-    A worker to evaluate an interactive clustering convergence study experiment.
+    A worker to evaluate an interactive clustering efficience study experiment.
     An experiment is aimed at iteratively and automatically annotated an NLP dataset with the interactive clustering methodology.
     The evaluation is aimed at analyze clustering performance at each iteration, and look at several iterations where performance reach specific threshold.
-    Then, go to the next step of the convergence study to plot iteration progress (performance evolution, time spent, annotation needed).
+    Then, go to the next step of the efficience study to plot iteration progress (performance evolution, time spent, annotation needed).
     Usage note:
         - The experiment run step of the notebook `2_Run_and_evaluate_experiments.ipynb` has to be done before the evaluation.
         - Parameters have to contain the path experiment to evaluate. A dictionary is needed to get parameters in `multiprocessing.Pool.imap_unordered` call.
         - The path to the environment has to be formatted by the notebook `1_Initialize_convergence_experiments.ipynb`.
-        - The notebook `2_Run_and_evaluate_convergence.ipynb` launch this script for all defined experiment environments with the librairy `multiprocessing`.
+        - The notebook `2_Run_until_convergence_and_evaluate_efficience.ipynb` launch this script for all defined experiment environments with the librairy `multiprocessing`.
 
     Args:
         parameters (Dict[str, Any]): A dictionary that contains several parameters. Two keys are expected in this dictionary: the experiment environment path (`"ENV_PATH"`), the convergence study progress to print (`"study_progress"`). An optional key (`"performance_goals_to_compute"`) can be added to define performance goal for iteration to highlight computation.

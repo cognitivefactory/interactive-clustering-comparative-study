@@ -1,6 +1,6 @@
-# Interactive Clustering : Business Consistency Study
+# Interactive Clustering : Business Relevance Study
 
-The main goal of this study is to **confirm the business viability** of the cluster confirmation method with features maximization metrics.
+The main goal of this study is to **confirm the business relevance** of clustering results.
 
 
 ## Hypotheses

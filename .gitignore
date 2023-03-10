@@ -19,6 +19,9 @@ __pycache__/
 datasets/.temp/
 datasets/*/
 
+# previous results
+*/previous/*/
+
 # build
 *.egg-info/
 dist/

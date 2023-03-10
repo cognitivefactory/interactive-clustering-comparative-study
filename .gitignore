@@ -12,6 +12,7 @@ __pycache__/
 
 # experiments
 */experiments/*/
+*/experiments/*.json
 *.zip
 *.tar.gz
 
@@ -20,7 +21,7 @@ datasets/.temp/
 datasets/*/
 
 # previous results
-*/previous/*/
+*/previous/*.json
 
 # build
 *.egg-info/

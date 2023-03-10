@@ -10,3 +10,4 @@ lme4  # linear and mixed models.
 emmeans  # estimated marginal means.
 lmerTest  # Welch-Satterthwaite effective degrees of freedom analysis.
 pbkrtest  # Kenward-Roger approach for t test.
+pbnm  # parametric bootstrap, see https://support.posit.co/hc/en-us/articles/200711843-Working-Directories-and-Workspaces-in-the-RStudio-IDE#:~:text=The%20current%20working%20directory%20is,getwd()%20in%20the%20console.

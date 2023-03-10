@@ -1,11 +1,11 @@
-# Interactive Clustering Comparative Study
+# Interactive Clustering : Comparative Studies
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5648255.svg)](https://doi.org/10.5281/zenodo.5648255)
 
-A comparative study of [cognitivefactory-interactive-clustering](https://github.com/cognitivefactory/interactive-clustering/) functionalities on NLP datasets.
+Several comparative studies of [cognitivefactory-interactive-clustering](https://github.com/cognitivefactory/interactive-clustering/) functionalities on NLP datasets.
 
 
-## <a name="Description"></a> Quick description
+## Quick description
 
 ### Description of Interactive Clustering
 
@@ -13,7 +13,7 @@ _Interactive clustering_ is a method intended to assist in the design of a train
 
 This iterative process begins with an unlabeled dataset, and it uses a sequence of two substeps :
 
-1. the user defines constraints on data sampled by the mathine ;
+1. the user defines constraints on data sampled by the machine ;
 
 2. the machine performs data partitioning using a constrained clustering algorithm.
 
@@ -24,50 +24,30 @@ Thus, at each step of the process :
 - the machine offers a corrected and more relevant data partitioning for the next step.
 
 An implementation of this methodology is available here: [cognitivefactory-interactive-clustering](https://github.com/cognitivefactory/interactive-clustering).
-For more details, read the [main documentation](https://cognitivefactory.github.io/interactive-clustering/) of this package.
+For more details, read its [main documentation](https://cognitivefactory.github.io/interactive-clustering/).
 
-### Goals of Interactive Clustering Comparative Study 
+Furthermore, a web application based on Interactive Clustering Methodologoy is available here: [cognitivefactory-interactive-clustering-gui](https://github.com/cognitivefactory/interactive-clustering-gui).
+For more details, read its [main documentation](https://cognitivefactory.github.io/interactive-clustering-gui/).
 
-This repository provides a environment to carry out a comparative study of _Interactive Clustering_ implementation around two hypotheses.
-- **Hypothesis One**: _An annotation methodology based on Interactive Clustering implementation can converge to a business relevant ground truth_.
-- **Hypothesis Two**: _The convergence speed of Interactive Clustering methodology depends on several implementation parameters. We specifically study the influence of data preprocessing, data vectorization, constraints sampling strategy, and constrained clustering algorithm._
+### Description of studies
 
-In fact, several implementations are available, and the main goal is to determine the best ones.
+Several studies are provided here:
 
-### Experimetal protocol
-
-The proposed study consists in performing _Interactive Clustering_ iterations in order to annotate an unlabelled dataset, starting from no known constraints and ending when all the possible constraints between questions are defined.
-The human annotator is simulated by the algorithm, and annotations are made by comparing with ground truth labels: two questions are annotated with a `MUST_LINK` if they come from the same intent, and with a `CANNOT_LINK` constraint otherwise.
-
-Several parameters can be studied:
-- _data preprocessing_: cf. [`cognitivefactory-interactive-clustering.utils.preprocessing`](https://cognitivefactory.github.io/interactive-clustering/reference/utils/preprocessing/)
-- _data vectorization_: cf. [`cognitivefactory-interactive-clustering.utils.vectorization`](https://cognitivefactory.github.io/interactive-clustering/reference/utils/vectorization/)
-- _constraints sampling algorithms_: cf. [`cognitivefactory-interactive-clustering.sampling.factory`](https://cognitivefactory.github.io/interactive-clustering/reference/sampling/factory/)
-- _constrained clustering algorithms_: cf. [`cognitivefactory-interactive-clustering.clustering.factory`](https://cognitivefactory.github.io/interactive-clustering/reference/clustering/factory/)
-
-The study can be done on several datasets, and observations can be done several times with dfferent random seeds.
-
-During _Interactive Clustering_ iterations, the relevance of data segmentation is measured using homogeneity, completeness, and v-measure, computed on the clustering results of each iteration.
-Measures are obtained through comparison with the ground truth, corresponding to annotations by business experts prior to the experiment (with no computer guidance). 
-
-To analyse the convergence speed and the effect size of the implementation parameters on the number of annotations required, the authors perform repeated measures ANOVA in R. Post-hoc comparisons are performed using Tukey HSD procedure.
-Finally, the optimal set of parameters according to statistical analysis is selected to train a candidate intents classifier.
-
-### Implementation
-
-1. Each experiment to run is modelized by a subfolder path. The path contains the dataset used, the values of parameters studied, and the random seed of the experiment. Several JSON files are needed to store parameters, temporary computations and experiment results.
-2. All experiment runs can be parallelized. During the run, clustering evaluation and algorithm speed are stored.
-3. When all experiments are run, main effects and post hoc analyzes are made, based on experiment results.
-4. Then, best parameters to get the groundtruth can be deduced.
-
-All these steps are implemented in Python and R, and can be run within Jupyter Notebooks.
+1. `convergence`: Aims to **confirm the technical efficience** of the method by verifying its convergence and by finding the best implementation.
+2. `computation time`: Aims to **estimate the time needed** for algorithms to reach their objectives.
+3. `annotation error`: Aims to **estimate the labeling error impact** on clustering results.
+4. `business consistency`: Aims to **confirm the business viability** of the cluster confirmation method with features maximization metrics.
+5. `annotation time`: Aims to **estimate the time needed** to annotated constraints.
 
 ### Datasets
 
-- "_French trainset for chatbots dealing with usual requests on bank cards_" (Schild 2021): This dataset represents examples of common customer requests relating to bank cards management. It can be used as a training set for a small chatbot intended to process these usual requests.
+Used datasets are:
+
+- "_French trainset for chatbots dealing with usual requests on bank cards_" (Schild, 2021): This dataset represents examples of common customer requests relating to bank cards management. It can be used as a training set for a small chatbot intended to process these usual requests.
+- "_MLSUM: The Multilingual Summarization Corpus_" (Scialom et al., 2020): A subset of newspapers articles in most popular category. It can be used to train a small newspaper classifier.
 
 
-## <a name="Requirements"></a> Requirements
+## Requirements
 
 Interactive Clustering Comparative Study requires:
 
@@ -77,7 +57,7 @@ Interactive Clustering Comparative Study requires:
 </summary>
 Check that the Python location is in your <code>PATH</code> variable.
 
-For Windows, the following directories should be in your <code> PATH</code>:
+For Windows, the following directories should be in your <code>PATH</code>:
 - <code>$HOME/AppData/Local/Programs/Python/Python38</code> ;
 - <code>$HOME/AppData/Local/Programs/Python/Python38/Scripts</code> ;
 - <code>$HOME/AppData/Roaming/Python/Python38/Scripts</code> .
@@ -85,16 +65,17 @@ For Windows, the following directories should be in your <code> PATH</code>:
 
 <details>
 <summary>
-<a href="https://cloud.r-project.org/index.html">R 4.1</a> or above.
+<a href="https://cloud.r-project.org/index.html">R 4.Y</a> or above.
 </summary>
 Check that the R location is in your <code>PATH</code> variable.
 
-For Windows, if you have installed R in <code>$HOME/AppData/Local/Programs</code>, the following directory should be in your <code>PATH</code>:
-- <code>$HOME/AppData/Local/Programs/R/R-4.1.1/bin</code>.
+For Windows, it can be:
+- <code>C:\Program Files\R\R-4.Y.Z/bin</code>.
+- <code>$HOME/AppData/Local/Programs/R/R-4.Y.Z/bin</code>.
 </details>
 
 
-## <a name="Installation"></a> Installation
+## Installation
 
 Create a virtual environment with `venv`:
 ```bash
@@ -119,18 +100,21 @@ R -e "install.packages('pillar', repos='https://cran.r-project.org/')"
 R -e "IRkernel::installspec()"  # r kernel spec settings.
 
 # Install Python dependencies.
-python -m pip install "cognitivefactory-interactive-clustering==0.4.2"  # interactive-clustering package.
-python -m spacy download "fr_core_news_sm-2.3.0" --direct # spacy language model (the one you want, with version "2.3")
-python -m pip install "pandas"  # data management.
-python -m pip install "tqdm"  # bar progress.
+python -m pip install "cognitivefactory-interactive-clustering==0.5.4"  # interactive-clustering package.
+python -m spacy download "fr_core_news_sm-3.1.0" --direct # spacy language model (the one you want, with version "3.1.x")
 python -m pip install "matplotlib"  # graph management.
+python -m pip install "pandas"  # data management.
+python -m pip install "openpyxl"  # xlsx file management.
+python -m pip install "tqdm"  # bar progress.
+python -m pip install "xlsxwriter"  # xlsx file management
 
 # Install R dependencies.
 R -e "install.packages('sjstats', repos='https://cran.r-project.org/')"  # common statistics.
-R -e "install.packages('lme4', repos='https://cran.r-project.org/')"  # linear and mixed models.
-R -e "install.packages('emmeans', repos='https://cran.r-project.org/')"  # estimated marginal means.
-R -e "install.packages('lmerTest', repos='https://cran.r-project.org/')"  # Welch-Satterthwaite effective degrees of freedom analysis.
+R -e "install.packages('lme4')"  # linear and mixed models.
+R -e "install.packages('emmeans')"  # estimated marginal means.
+R -e "install.packages('lmerTest')"  # Welch-Satterthwaite effective degrees of freedom analysis.
 R -e "install.packages('pbkrtest', repos='https://cran.r-project.org/')"  # Kenward-Roger approach for t test.
+R -e "install.packages('pbnm')"  # parametric bootstrap, see https://support.posit.co/hc/en-us/articles/200711843-Working-Directories-and-Workspaces-in-the-RStudio-IDE#:~:text=The%20current%20working%20directory%20is,getwd()%20in%20the%20console.
 ```
 
 For developments, some packages can be installed for quality and types checking:
@@ -139,10 +123,10 @@ For developments, some packages can be installed for quality and types checking:
 source $HOME/.envs/interactive-clustering-comparative-study/Scripts/activate
 
 # Install Python dependencies.
-python -m pip install "black>=20.8b1"  # code formatting.
+python -m pip install "black>=21.10b0"  # code formatting.
 python -m pip install "black[jupyter]"  # code formatting.
 python -m pip install "isort>=5.7.0"  # code formatting.
-python -m pip install "mypy>=0.812"  # type checking.
+python -m pip install "mypy>=0.910"  # type checking.
 python -m pip install "darglint>=1.5.8"  # quality checking.
 python -m pip install "autoflake>=1.4"  # quality checking.
 python -m pip install "flake8-bandit>=2.1"  # quality checking.
@@ -159,8 +143,10 @@ python -m pip install "pep8-naming>=0.11.1"  # quality checking.
 python -m pip install "wps-light>=0.15.2"  # quality checking.
 ```
 
-## <a name="Execution"></a> Execution
 
+## Execution
+
+Launch `Jupyter Notebook` with:
 ```bash
 # Activate the virtual environment.
 source $HOME/.envs/interactive-clustering-comparative-study/Scripts/activate
@@ -169,26 +155,26 @@ source $HOME/.envs/interactive-clustering-comparative-study/Scripts/activate
 jupyter notebook
 ```
 
-1. Launch `1_Initialize_experiments_environments.ipynb` to set up experiments environments: it creates several subfolders for each combination of parameters to test, and initialize JSON files to store parameters, temporary computations and experiment results.
-2. Launch `2_Run_and_evaluate_experiments.ipynb` to run all experiments that have been set up with the previous notebook. Experiment runs are parallelized.
-3. Launch `3_Analyze_main_effecets_and_post_hoc.ipynb` to analyze main effects and post hoc based on experiment results.
+Then follow notebooks instructions.
 
-## <a name="Development"></a> Development
 
-To check code quality of scripts and notebooks, run the following command:
+## Development
+
+To check code quality of scripts and notebooks:
 ```bash
 ./scripts/code-quality-checking.sh
 ```
 
 
-## <a name="References"></a> References
+## References
 
 - **Interactive Clustering**:
-    - Theory: `Schild, E., Durantin, G., Lamirel, J.C., & Miconi, F. (2021). Conception itérative et semi-supervisée d'assistants conversationnels par regroupement interactif des questions. In EGC 2021 - 21èmes Journées Francophones Extraction et Gestion des Connaissances. Edition RNTI. ⟨hal-03133007⟩`
+    - Theory: `Schild, E., Durantin, G., Lamirel, J.C., & Miconi, F. (2021). Conception itérative et semi-supervisée d'assistants conversationnels par regroupement interactif des questions. In EGC 2021 - 21èmes Journées Francophones Extraction et Gestion des Connaissances. Edition RNTI. <hal-03133007>`
 	- Implementation: `Schild, E. (2021). cognitivefactory/interactive-clustering. Zenodo. https://doi.org/10.5281/zenodo.4775251`
 
 - **Datasets**:
-    - Bank cards management: `Schild, E. (2021). French trainset for chatbots dealing with usual requests on bank cards (Version 1.0.0) [Data set]. Zenodo. http://doi.org/10.5281/zenodo.4769950.`
+    - Bank cards management: `Schild, E. (2021). French trainset for chatbots dealing with usual requests on bank cards [Data set]. Zenodo. http://doi.org/10.5281/zenodo.4769949.`
+	- MLSUM: `Scialom, T., Dray, P.-A., Lamprier, S., Piwowarski, B., & Staiano, J. (2020). MLSUM: The Multilingual Summarization Corpus (Version 1). arXiv. https://doi.org/10.48550/ARXIV.2004.14900.`
 
 - **Experimental protocol**:
     - Evaluation with _Sklearn_: `Buitinck, L., Louppe, G., Blondel, M., Pedregosa, F., Mueller, A., Grisel, O., Niculae, V., Prettenhofer, P., Gramfort, A., Grobler, J., Layton, R., Vanderplas, J., Joly, A., Holt, B., & Varoquaux, G. (2013). API design for machine learning software: experiments from the scikit-learn project. ArXiv, abs/1309.0238.`

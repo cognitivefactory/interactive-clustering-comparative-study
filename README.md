@@ -157,6 +157,9 @@ jupyter notebook
 
 Then follow notebooks instructions.
 
+Use the command `tar -czf ../experiments.tar.gz ../experiments/` to wrap results in a `.tar.gz` file,
+and use `tar -xzf ../experiments.tar.gz -C ../` to unwrap them.
+
 
 ## Development
 

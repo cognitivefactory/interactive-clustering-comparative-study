@@ -32,10 +32,10 @@ def experiment_run(
     """
     A worker to run an interactive clustering business relevance study on a convergence study (cf. study of efficience).
     Each experiment is evaluate with computation of :
-    - clustering consistency score:
-    - agreement score between annotations and previous clustering:
-    - clustering stabilization score:
-    - FMC modelization stabilization score:
+    - `consistency_score`: Test a TF-IDF + Linear SVM model on its own trainset with a high prediction score threshold in order to check data consistency. The consistency score is the f1-score computed. If f1-score is low (i.e. less than `0.80`), then trainset can be inconsistent : Data may be badly labeled or classes may overlap. Otherwise, f1-score should tend to 100%.
+    - `agreement_score_between_annotations_and_previous_clustering`: Compute the proportion of annotations that is similar to previous clustering results ("MUST_LINK" when same cluster, "CANNOT_LINK" when different clusters). If agreement is low (near to `0.0`), then constraints annotated will considerably fix clustering in next iteration. Otherwise, clustering is stable.
+    - `similarity_score_between_two_clustering`: Compute v-measure between two clustering (i.e., compare clustering at iteration N to clustering at iteration N-1/N-2/N-3). If vmeasure is stable, then clustering is stable too.
+    - `similarity_score_between_two_fmc_modelization`: Compare two clustering by their FMC modelizations (i.e., compute FMC modelization for clustering at iteration N and for clustering at iteration N-1/N-2/N-3 and compare them). If comparison score is stable, then clustering is stable too.
     
     Usage note:
         - Parameters have to contain the path experiment to run. A dictionary is needed to get parameters in `multiprocessing.Pool.imap_unordered` call.

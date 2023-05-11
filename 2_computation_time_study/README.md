@@ -5,7 +5,8 @@ The main goal of this study is to **estimate the time needed** for algorithms to
 
 ## Hypotheses
 
-`TODO`.
+This sub-repository provides an environment to carry out a comparative study of _Interactive Clustering_ implementation around one hypothese.
+- **Hypothesis One**: `TODO`.
 
 
 ## Experimental protocol

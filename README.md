@@ -35,9 +35,10 @@ Several studies are provided here:
 
 1. `efficience`: Aims to **confirm the technical efficience** of the method by verifying its convergence to a ground truth and by finding the best implementation to increase convergence speed.
 2. `computation time`: Aims to **estimate the time needed** for algorithms to reach their objectives.
-3. `annotation error`: Aims to **estimate the labeling error impact** on clustering results.
-4. `business relevance`: Aims to **confirm the business relevance** of clustering results.
-5. `annotation time`: Aims to **estimate the time needed** to annotated constraints.
+3. `annotation time`: Aims to **estimate the time needed** to annotated constraints.
+4. `constraints number`: Aims to **estimate the number of constraints needed** to have a relevant annotated dataset.
+5. `business relevance`: Aims to **confirm the business relevance** of clustering results.
+6. `annotation error`: Aims to **estimate the labeling error impact** on clustering results.
 
 ### Datasets
 
@@ -151,7 +152,7 @@ Launch `Jupyter Notebook` with:
 # Activate the virtual environment.
 source $HOME/.envs/interactive-clustering-comparative-study/Scripts/activate
 
-# Run jupyter at http://localhost:8888/tree
+# Run jupyter at http://localhost:8888/tree (the port number can change)
 jupyter notebook
 ```
 

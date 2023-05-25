@@ -111,11 +111,11 @@ python -m pip install "xlsxwriter"  # xlsx file management
 
 # Install R dependencies.
 R -e "install.packages('sjstats', repos='https://cran.r-project.org/')"  # common statistics.
-R -e "install.packages('lme4')"  # linear and mixed models.
-R -e "install.packages('emmeans')"  # estimated marginal means.
-R -e "install.packages('lmerTest')"  # Welch-Satterthwaite effective degrees of freedom analysis.
+R -e "install.packages('lme4', repos='https://cran.r-project.org/')"  # linear and mixed models.
+R -e "install.packages('emmeans', repos='https://cran.r-project.org/')"  # estimated marginal means.
+R -e "install.packages('lmerTest', repos='https://cran.r-project.org/')"  # Welch-Satterthwaite effective degrees of freedom analysis.
 R -e "install.packages('pbkrtest', repos='https://cran.r-project.org/')"  # Kenward-Roger approach for t test.
-R -e "install.packages('pbnm')"  # parametric bootstrap, see https://support.posit.co/hc/en-us/articles/200711843-Working-Directories-and-Workspaces-in-the-RStudio-IDE#:~:text=The%20current%20working%20directory%20is,getwd()%20in%20the%20console.
+R -e "install.packages('pbnm', repos='https://cran.r-project.org/')"  # parametric bootstrap, see https://support.posit.co/hc/en-us/articles/200711843-Working-Directories-and-Workspaces-in-the-RStudio-IDE#:~:text=The%20current%20working%20directory%20is,getwd()%20in%20the%20console.
 ```
 
 For developments, some packages can be installed for quality and types checking:

@@ -356,4 +356,9 @@ def experiment_run(
         ITERATION += 1
         ITERATION_ID = str(ITERATION).zfill(4)
 
+    # Write a ".done" file when convergence.
+    with open(
+        ENV_PATH + ".done", "a"
+    ) as file_done:
+        pass
     return 0

@@ -21,7 +21,7 @@ datasets/.temp/
 datasets/*/
 
 # previous results
-*/experiments/*/
+*/previous/*/
 */previous/*.json
 
 # build

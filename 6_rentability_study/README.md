@@ -1,6 +1,6 @@
-# Interactive Clustering : Business Relevance Study
+# Interactive Clustering : Rentability Study
 
-The main goal of this study is to **confirm the business relevance** of clustering results.
+The main goal of this study is to **predict the rentability** of one more iteration.
 
 
 ## Hypotheses

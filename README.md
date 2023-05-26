@@ -37,8 +37,9 @@ Several studies are provided here:
 2. `computation time`: Aims to **estimate the time needed** for algorithms to reach their objectives.
 3. `annotation time`: Aims to **estimate the time needed** to annotated constraints.
 4. `constraints number`: Aims to **estimate the number of constraints needed** to have a relevant annotated dataset.
-5. `business relevance`: Aims to **confirm the business relevance** of clustering results.
-6. `annotation error`: Aims to **estimate the labeling error impact** on clustering results.
+5. `relevance`: Aims to **confirm the relevance** of clustering results.
+6. `rentability`: Aims to **predict the rentability** of one more iteration.
+7. `annotation error`: Aims to **estimate the labeling error impact** on clustering results.
 
 ### Datasets
 
@@ -103,6 +104,8 @@ R -e "IRkernel::installspec()"  # r kernel spec settings.
 # Install Python dependencies.
 python -m pip install "cognitivefactory-interactive-clustering==0.5.4"  # interactive-clustering package.
 python -m spacy download "fr_core_news_sm-3.1.0" --direct # spacy language model (the one you want, with version "3.1.x")
+python -m pip install "cognitivefactory-features-maximization-metric==0.1.1"  # Features Maximization Metric.
+python -m pip install "farm-haystack"  # llm call.
 python -m pip install "matplotlib"  # graph management.
 python -m pip install "pandas"  # data management.
 python -m pip install "openpyxl"  # xlsx file management.

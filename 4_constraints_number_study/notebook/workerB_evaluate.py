@@ -226,6 +226,16 @@ def experiment_evaluate(
         graph_folderpath=ENV_PATH,
     )
 
+    ### ### ### ### ###
+    ### End.
+    ### ### ### ### ###
+
+    # Write a ".done_evaluation" file when convergence.
+    with open(
+        ENV_PATH + ".done_evaluation", "a"
+    ) as file_done:
+        pass
+
     return 0
 
 

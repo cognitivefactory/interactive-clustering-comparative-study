@@ -105,7 +105,7 @@ R -e "IRkernel::installspec()"  # r kernel spec settings.
 python -m pip install "cognitivefactory-interactive-clustering==0.5.4"  # interactive-clustering package.
 python -m spacy download "fr_core_news_sm-3.1.0" --direct # spacy language model (the one you want, with version "3.1.x")
 python -m pip install "cognitivefactory-features-maximization-metric==0.1.1"  # Features Maximization Metric.
-python -m pip install "farm-haystack"  # llm call.
+python -m pip install "openai"  # llm call.
 python -m pip install "matplotlib"  # graph management.
 python -m pip install "pandas"  # data management.
 python -m pip install "openpyxl"  # xlsx file management.

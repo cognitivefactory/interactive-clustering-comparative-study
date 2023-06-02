@@ -316,7 +316,7 @@ def experiment_run(
         # Store dictionary of clustering results.
         with open(ENV_PATH + "dict_of_clustering_results.json", "w") as file_clustering_results_save:
             dict_of_clustering_results[ITERATION_ID] = current_clustering_result
-            json.dump(dict_of_clustering_results, file_clustering_results_save, indent=1)
+            json.dump(dict_of_clustering_results, file_clustering_results_save)
 
         # Store dictionary of computation time.
         with open(ENV_PATH + "dict_of_computation_times.json", "w") as file_time_save:
@@ -334,7 +334,7 @@ def experiment_run(
                 "TOTAL_RUN": (TIME_sampling_stop - TIME_sampling_init)
                 + (TIME_clustering_stop - TIME_clustering_init),
             }
-            json.dump(dict_of_computation_times, file_time_save, indent=1)
+            json.dump(dict_of_computation_times, file_time_save)
 
         # Store dictionary of annotation history.
         with open(
@@ -343,7 +343,7 @@ def experiment_run(
             dict_of_constraints_annotations[
                 ITERATION_ID
             ] = list_of_triplet_with_annotation
-            json.dump(dict_of_constraints_annotations, file_annotations_save, indent=1)
+            json.dump(dict_of_constraints_annotations, file_annotations_save)
 
         ### ### ### ### ###
         ### Update iteration.

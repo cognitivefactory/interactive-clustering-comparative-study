@@ -131,7 +131,6 @@ def experiment_run(
                     "total": (time_stop - time_start),
                 },
                 file_time_preprocessing,
-                indent=1,
             )
         return 0
             
@@ -158,7 +157,6 @@ def experiment_run(
                     "total": (time_stop - time_start),
                 },
                 file_time_vectorization,
-                indent=1,
             )
         return 0
     
@@ -239,7 +237,6 @@ def experiment_run(
                     "total": (time_stop - time_start),
                 },
                 file_time_sampling,
-                indent=1,
             )
         return 0
             
@@ -272,7 +269,6 @@ def experiment_run(
                     "total": (time_stop - time_start),
                 },
                 file_time_clustering,
-                indent=1,
             )
         return 0
    

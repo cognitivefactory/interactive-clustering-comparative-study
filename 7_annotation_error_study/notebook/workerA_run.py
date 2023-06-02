@@ -194,7 +194,7 @@ def experiment_run(
     with open(
         ENV_PATH + "list_of_constraints.json", "w"
     ) as file_constraints:
-        json.dump(list_of_constraints, file_constraints, indent=1)
+        json.dump(list_of_constraints, file_constraints)
 
 
     ### ### ### ### ###
@@ -220,7 +220,7 @@ def experiment_run(
 
     # Store dictionary of clustering results.
     with open(ENV_PATH + "dict_of_clustering.json", "w") as file_clustering:
-        json.dump(dict_of_clustering, file_clustering, indent=1)
+        json.dump(dict_of_clustering, file_clustering)
 
 
     ### ### ### ### ###
@@ -270,7 +270,7 @@ def experiment_run(
 
     # Store dictionary of clustering evaluation.
     with open(ENV_PATH + "dict_of_clustering_performances.json", "w") as file_performances:
-        json.dump(dict_of_clustering_performances, file_performances, indent=1)
+        json.dump(dict_of_clustering_performances, file_performances)
 
     # End of script.
     return 0

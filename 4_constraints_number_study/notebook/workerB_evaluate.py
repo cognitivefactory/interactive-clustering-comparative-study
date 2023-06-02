@@ -153,7 +153,7 @@ def experiment_evaluate(
 
     # Store dictionary of clustering evaluation.
     with open(ENV_PATH + "dict_of_clustering_performances.json", "w") as file_performances:
-        json.dump(dict_of_clustering_performances, file_performances, indent=1)
+        json.dump(dict_of_clustering_performances, file_performances)
 
     ### ### ### ### ###
     ### Find iterations that reach specific performance threshold.
@@ -191,7 +191,7 @@ def experiment_evaluate(
 
     # Store dictionary of iteration to highlight.
     with open(ENV_PATH + "dict_of_iterations_to_highlight.json", "w") as file_iteration_highlight:
-        json.dump(dict_of_iterations_to_highlight, file_iteration_highlight, indent=1)
+        json.dump(dict_of_iterations_to_highlight, file_iteration_highlight)
 
     ### ### ### ### ###
     ### Plot clustering performance evolution.

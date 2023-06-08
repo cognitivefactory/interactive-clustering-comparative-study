@@ -32,11 +32,17 @@ Some experiments needs data from previous studies.
 Here, constraints annotations and clustering results evolutions are expected from `1_convergence_study` study.
 See the export notebook of this study and paste the exported files in the `previous` folder.
 
+
 ## Results
 
 Due to the volume of data generated (more than 25GB), not all results are versioned on GitHub.
 
 However, a summary of results are stored in `results`.
+
+In order to make a save in a `.tar.gz` file, you can use the following command:
+```bash
+tar -czf 6_rentability_study.tar.gz experiments/ notebook/ previous/ results/ README.md
+```
 
 
 ## Scientific contribution

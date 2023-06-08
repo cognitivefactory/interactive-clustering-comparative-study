@@ -56,6 +56,11 @@ Due to the volume of data generated (more than 25GB), not all results are versio
 
 However, a summary of results are stored in `results`.
 
+In order to make a save in a `.tar.gz` file, you can use the following command:
+```bash
+tar -czf 1_efficience_study.tar.gz experiments/ notebook/ results/ README.md
+```
+
 
 ## Scientific contribution
 

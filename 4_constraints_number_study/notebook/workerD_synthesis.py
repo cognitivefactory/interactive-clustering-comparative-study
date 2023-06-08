@@ -66,6 +66,13 @@ def experiments_synthesis(
 
         # Dataset information.
         dict_of_experiments_synthesis[env_path]["dataset"] = env_path.split("/")[2]
+        with open(
+            env_path + "../../../../../../config.json", "r"
+        ) as file_config_dataset:
+            CONFIG_DATASET = json.load(file_config_dataset)
+        dict_of_experiments_synthesis[env_path]["dataset_reference"] = env_path.split("/")[2].split("-")[0]
+        dict_of_experiments_synthesis[env_path]["dataset_size"] = CONFIG_DATASET["size"]
+        dict_of_experiments_synthesis[env_path]["dataset_file_name"] = CONFIG_DATASET["file_name"]
         # Preprocessing information.
         dict_of_experiments_synthesis[env_path]["preprocessing"] = env_path.split("/")[
             3

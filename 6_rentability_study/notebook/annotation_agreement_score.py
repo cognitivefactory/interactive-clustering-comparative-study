@@ -166,8 +166,8 @@ def display_annotation_agreement_score(
     axis_plot = fig_plot.gca()
 
     # Set range of axis.
-    #axis_plot.set_xlim(xmin=0)
-    axis_plot.set_ylim(ymin=-0.05, ymax=1.05)
+    axis_plot.set_xlim(xmin=0, xmax=int(max(list_of_iterations)))
+    axis_plot.set_ylim(ymin=0, ymax=1)
 
     # Plot average annotation agreement score evolution.
     axis_plot.plot(

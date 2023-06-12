@@ -15,6 +15,7 @@
 from typing import List, Dict, Optional, Any
 import json
 import numpy as np
+from scipy import stats as scipystats
 from cognitivefactory.features_maximization_metric.fmc import FeaturesMaximizationMetric
 from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -23,7 +24,6 @@ from sklearn.svm import LinearSVC
 from sklearn import metrics
 from matplotlib import pyplot as plt
 from matplotlib.figure import Figure
-from scipy import stats as scipystats
 
 # ==============================================================================
 # 1. COMPUTE CONSISTENCY SCORE
@@ -93,7 +93,7 @@ def display_consistency_score(
     plot_label: str = "Score de cohérence du clustering.",
     plot_color: str = "black",
     graph_filename: str = "consistency_score.png",
-) -> float:
+) -> Figure:
     """
     Display consistency score per iteration.
     
@@ -105,9 +105,8 @@ def display_consistency_score(
         plot_color (str): The color of plot. Defaults to `"black"`.
         graph_filename (str): The graph filename. Default to `"consistency_score.png"`.
         
-    
     Returns:
-        float: Consitency score, i.e. f1-score on trainset.
+        Figure: Figure of consistency score evolution.
     """
     
     # Definition of list_of_iteration:

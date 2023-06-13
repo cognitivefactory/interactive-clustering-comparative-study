@@ -186,19 +186,6 @@ def display_consistency_score(
     axis_plot.set_xlim(xmin=0, xmax=int(max(list_of_iterations)))
     axis_plot.set_ylim(ymin=0, ymax=1)
 
-    # Plot groundtruth consistency.
-    axis_plot.plot(
-        [int(iter_plot) for iter_plot in list_of_iterations],  # x
-        [groundtruth_consistency_score for iter_mean_plot in list_of_iterations],  # y
-        label="Score de cohérence de la vérité terrain.",
-        marker="",
-        markerfacecolor="black",
-        markersize=5,
-        color="black",
-        linewidth=2,
-        linestyle="--",
-    )
-
     # Plot average clustering consistency evolution.
     axis_plot.plot(
         [int(iter_mean) for iter_mean in list_of_iterations],  # x
@@ -209,7 +196,7 @@ def display_consistency_score(
         markersize=5,
         color=plot_color,
         linewidth=2,
-        linestyle="-",
+        linestyle="--",
     )
     axis_plot.fill_between(
         x=[int(iter_err) for iter_err in list_of_iterations],  # x
@@ -219,9 +206,22 @@ def display_consistency_score(
         alpha=0.2,
     )
 
+    # Plot groundtruth consistency.
+    axis_plot.plot(
+        [int(iter_plot) for iter_plot in list_of_iterations],  # x
+        [groundtruth_consistency_score for iter_mean_plot in list_of_iterations],  # y
+        label="Score de cohérence de la vérité terrain.",
+        marker="",
+        markerfacecolor="black",
+        markersize=5,
+        color="black",
+        linewidth=2,
+        linestyle="-",
+    )
+
     # Set axis name.
-    axis_plot.set_xlabel("itération (#)", fontsize=18,)
-    axis_plot.set_ylabel("cohérence (%)", fontsize=18,)
+    axis_plot.set_xlabel("itération [#]", fontsize=18,)
+    axis_plot.set_ylabel("cohérence [%]", fontsize=18,)
 
     # Plot the legend.
     axis_plot.legend(fontsize=15, loc="lower right")

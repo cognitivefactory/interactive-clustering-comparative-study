@@ -199,11 +199,11 @@ def experiments_performance_overview(
 
     # Set axis name.
     axis.set_xlabel(
-        "iteration (#)",
+        "iteration [#]",
         fontsize=18,
     )
     axis.set_ylabel(
-        "v-measure (%)",
+        "v-measure [%]",
         fontsize=18,
     )
 
@@ -424,11 +424,11 @@ def experiments_time_overview(
 
     # Set axis name.
     axis.set_xlabel(
-        "iteration (#)",
+        "iteration [#]",
         fontsize=18,
     )
     axis.set_ylabel(
-        "time (s)",
+        "time [s]",
         fontsize=18,
     )
 

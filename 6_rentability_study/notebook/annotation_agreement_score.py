@@ -179,7 +179,7 @@ def display_annotation_agreement_score(
         markersize=5,
         color=plot_color,
         linewidth=2,
-        linestyle="-",
+        linestyle="--",
     )
     axis_plot.fill_between(
         x=[int(iter_err) for iter_err in list_of_iterations],  # x
@@ -190,8 +190,8 @@ def display_annotation_agreement_score(
     )
 
     # Set axis name.
-    axis_plot.set_xlabel("itération (#)", fontsize=18,)
-    axis_plot.set_ylabel("accord annotation/clustering (%)", fontsize=18,)
+    axis_plot.set_xlabel("itération [#]", fontsize=18,)
+    axis_plot.set_ylabel("accord annotation/clustering [%]", fontsize=18,)
 
     # Plot the legend.
     axis_plot.legend(fontsize=15, loc="lower right")

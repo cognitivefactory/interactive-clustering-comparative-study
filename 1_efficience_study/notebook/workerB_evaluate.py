@@ -446,8 +446,8 @@ def _plot_clustering_performance_evolution(
             )
 
     # Set axis name.
-    axis.set_xlabel("iteration (#)")
-    axis.set_ylabel("performance (%)")
+    axis.set_xlabel("iteration [#]")
+    axis.set_ylabel("performance [%]")
 
     # Plot the title.
     axis.set_title(graph_title, fontsize=20)
@@ -596,8 +596,8 @@ def _plot_annotation_completeness_evolution(
             )
 
     # Set axis name.
-    axis.set_xlabel("iteration (#)")
-    axis.set_ylabel("constraints number (#)")
+    axis.set_xlabel("iteration [#]")
+    axis.set_ylabel("constraints number [#]")
 
     # Plot the title.
     if graph_title is not None:
@@ -721,8 +721,8 @@ def _plot_time_spent_evolution(
             )
 
     # Set axis name.
-    axis.set_xlabel("iteration (#)")
-    axis.set_ylabel("time spent (s)")
+    axis.set_xlabel("iteration [#]")
+    axis.set_ylabel("time spent [s]")
 
     # Plot the title.
     axis.set_title(graph_title, fontsize=20)

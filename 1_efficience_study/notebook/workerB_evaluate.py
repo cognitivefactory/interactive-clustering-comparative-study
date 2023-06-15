@@ -384,7 +384,7 @@ def _plot_clustering_performance_evolution(
     ]
 
     # Set range of axis.
-    axis.set_ylim(ymin=0, ymax=1)
+    axis.set_ylim(ymin=-0.025, ymax=1.025)
 
     # Plot homogeneity evolution.
     axis.plot(

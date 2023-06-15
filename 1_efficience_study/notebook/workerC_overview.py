@@ -154,7 +154,7 @@ def experiments_performance_overview(
     ]
 
     # Set range of axis.
-    axis.set_ylim(ymin=0, ymax=1)
+    axis.set_ylim(ymin=-0.025, ymax=1.025)
 
     # For all experiments overview...
     for overview_3, settings_3 in overview_settings.items():

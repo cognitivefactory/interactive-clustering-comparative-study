@@ -183,8 +183,8 @@ def display_consistency_score(
     axis_plot = fig_plot.gca()
 
     # Set range of axis.
-    axis_plot.set_xlim(xmin=0, xmax=int(max(list_of_iterations)))
-    axis_plot.set_ylim(ymin=0, ymax=1)
+    axis_plot.set_xlim(xmin=-0.5, xmax=int(max(list_of_iterations))+1.5)
+    axis_plot.set_ylim(ymin=-0.01, ymax=1.01)
 
     # Plot average clustering consistency evolution.
     axis_plot.plot(

@@ -192,6 +192,8 @@ def display_annotation_agreement_score(
     # Set axis name.
     axis_plot.set_xlabel("itération [#]", fontsize=18,)
     axis_plot.set_ylabel("accord annotation/clustering [%]", fontsize=18,)
+    plt.xticks(fontsize=15)
+    plt.yticks(fontsize=15)
 
     # Plot the legend.
     axis_plot.legend(fontsize=15, loc="lower right")

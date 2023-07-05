@@ -80,7 +80,8 @@ def display_clustering_similarity(
     implementation: str,
     list_of_experiments: List[str],
     list_of_iterations: Optional[List[str]] = None,
-    plot_label: str = "Similarité entre deux itérations de clustering.",
+    plot_label: str = "Différence entre deux itérations de clustering.",
+    plot_groundtruth_label: str = "Similarité entre le clustering et la vérité terrain.",
     plot_color: str = "black",
     graph_filename: str = "clustering_similarity.png",
 ) -> Figure:
@@ -91,7 +92,8 @@ def display_clustering_similarity(
         implementation (str): The folder that represents the folder to display.
         list_of_experiments (List[str]). The list of files that represent experiments to analyze.
         list_of_iterations (Optional[List[str]]): The list of iterations used for display. Defaults to `None`.
-        plot_label (str): The label of the plot. Defaults to `"Similarité entre deux itérations de clustering."`.
+        plot_label (str): The label of the plot. Defaults to `"Différence entre deux itérations de clustering."`.
+        plot_groundtruth_label (str): The label of the groundtruth plot. Defaults to `"Similarité entre le clustering et la vérité terrain."`.
         plot_color (str): The color of plot. Defaults to `"black"`.
         graph_filename (str): The graph filename. Default to `"clustering_similarity.png"`.
         
@@ -149,11 +151,11 @@ def display_clustering_similarity(
             # Append the clustering similarity for the current experiment and for this iteration.
             if iter_2 in clustering_similarity["similarity"].keys():
                 dict_of_clustering_similarity_evolution[iter_2].append(
-                    clustering_similarity["similarity"][iter_2]
+                    1-clustering_similarity["similarity"][iter_2]
                 )
             # If iteration isn't reached by this experiment, add 1.0.
             else:
-                dict_of_clustering_similarity_evolution[iter_2].append(1.0)
+                dict_of_clustering_similarity_evolution[iter_2].append(0.0)
                 
 
     # Initialize storage of experiment clustering similarity mean for all iterations.
@@ -239,7 +241,7 @@ def display_clustering_similarity(
     axis_plot.plot(
         [int(iter_mean) for iter_mean in list_of_iterations],  # x
         [dict_of_performances_evolution_per_iteration_MEAN[iter_mean] for iter_mean in list_of_iterations],  # y
-        label="Similarité moyenne entre le clustering et la vérité terrain",
+        label=plot_groundtruth_label,
         marker="",
         markerfacecolor="black",
         markersize=5,
@@ -262,7 +264,7 @@ def display_clustering_similarity(
     plt.yticks(fontsize=15)
 
     # Plot the legend.
-    axis_plot.legend(fontsize=15, loc="lower right")
+    axis_plot.legend(fontsize=15, loc="center right")
 
     # Plot the grid.
     axis_plot.grid(True)

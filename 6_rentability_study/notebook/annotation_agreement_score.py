@@ -75,6 +75,7 @@ def display_annotation_agreement_score(
     list_of_experiments: List[str],
     list_of_iterations: Optional[List[str]] = None,
     plot_label: str = "Accord annotation/clustering.",
+    plot_groundtruth_label: str = "Similarité entre le clustering et la vérité terrain.",
     plot_color: str = "black",
     graph_filename: str = "annotation_agreement_score.png",
 ) -> Figure:
@@ -86,6 +87,7 @@ def display_annotation_agreement_score(
         list_of_experiments (List[str]). The list of files that represent experiments to analyze.
         list_of_iterations (Optional[List[str]]): The list of iterations used for display. Defaults to `None`.
         plot_label (str): The label of the plot. Defaults to `"Accord annotation/clustering."`.
+        plot_groundtruth_label (str): The label of the groundtruth plot. Defaults to `"Similarité entre le clustering et la vérité terrain."`.
         plot_color (str): The color of plot. Defaults to `"black"`.
         graph_filename (str): The graph filename. Default to `"annotation_agreement_score.png"`.
         
@@ -138,27 +140,67 @@ def display_annotation_agreement_score(
             annotation_agreement_scores: Dict[str, float] = json.load(file_scores_r)
         
         # For each requested iteration...
-        for iter_a in list_of_iterations:
+        for iter_2 in list_of_iterations:
 
             # Append the annotation agreement score for the current experiment and for this iteration.
-            if iter_a in annotation_agreement_scores.keys():
-                dict_of_annotation_agreement_score_evolution[iter_a].append(
-                    annotation_agreement_scores[iter_a]
+            if iter_2 in annotation_agreement_scores.keys():
+                dict_of_annotation_agreement_score_evolution[iter_2].append(
+                    annotation_agreement_scores[iter_2]
                 )
             # If iteration isn't reached by this experiment, add 1.0.
             else:
-                dict_of_annotation_agreement_score_evolution[iter_a].append(1.0)
+                dict_of_annotation_agreement_score_evolution[iter_2].append(1.0)
                 
 
     # Initialize storage of experiment annotation agreement score mean for all iterations.
     dict_of_annotation_agreement_score_evolution_MEAN: Dict[str, float] = {
-        iter_mean: np.mean(dict_of_annotation_agreement_score_evolution[iter_mean])
-        for iter_mean in list_of_iterations
+        iter_2m: np.mean(dict_of_annotation_agreement_score_evolution[iter_2m])
+        for iter_2m in list_of_iterations
     }
     # Initialize storage of experiment annotation agreement score standard error of the mean for all iterations.
     dict_of_annotation_agreement_score_evolution_SEM: Dict[str, float] = {
-        iter_sem: scipystats.sem(dict_of_annotation_agreement_score_evolution[iter_sem])
-        for iter_sem in list_of_iterations
+        iter_2s: scipystats.sem(dict_of_annotation_agreement_score_evolution[iter_2s])
+        for iter_2s in list_of_iterations
+    }
+        
+
+    # Initialize storage of experiment performances for all iterations.
+    dict_of_performances_evolution_per_iteration: Dict[str, List[float]] = {
+        iter_3i: []
+        for iter_3i in list_of_iterations
+    }
+    
+    # For each experiments.
+    for exp3 in list_of_experiments:
+        
+        # Load data.
+        with open("../experiments/" + implementation + "/previous_results___" + exp3, "r") as file_experiment_data_r:
+            experiment_data: Dict[str, Any] = json.load(file_experiment_data_r)
+        dict_of_clustering_performances: Dict[str, Dict[str, float]] = experiment_data["dict_of_clustering_performances"]
+
+        # For each requested iteration...
+        for iter_3 in list_of_iterations:
+
+            # Append the clustering performancre for the current experiment and for this iteration.
+            if iter_3 in dict_of_clustering_performances.keys():
+                dict_of_performances_evolution_per_iteration[iter_3].append(
+                    dict_of_clustering_performances[iter_3]["v_measure"]
+                )
+            # If iteration isn't reached by this experiment, duplicate the last known results.
+            # Most of the time: the experiment has reached annotation completeness and there is no more iteration because clustering is "perfect" (v-measure==1.0).
+            else:
+                dict_of_performances_evolution_per_iteration[iter_3].append(1.0)
+                
+    # Compute mean of performance evolution.
+    dict_of_performances_evolution_per_iteration_MEAN: Dict[str, Dict[str, float]] = {
+        iter_3m: np.mean(dict_of_performances_evolution_per_iteration[iter_3m])
+        for iter_3m in dict_of_performances_evolution_per_iteration.keys()
+    }
+        
+    # Compute sem of performance evolution.
+    dict_of_performances_evolution_per_iteration_SEM: Dict[str, Dict[str, float]] = {
+        iter_3s: scipystats.sem(dict_of_performances_evolution_per_iteration[iter_3s])
+        for iter_3s in dict_of_performances_evolution_per_iteration.keys()
     }
     
     # Create a new figure.
@@ -186,6 +228,26 @@ def display_annotation_agreement_score(
         y1=[(dict_of_annotation_agreement_score_evolution_MEAN[iter_errinf] - dict_of_annotation_agreement_score_evolution_SEM[iter_errinf]) for iter_errinf in list_of_iterations],  # y1
         y2=[(dict_of_annotation_agreement_score_evolution_MEAN[iter_errsup] + dict_of_annotation_agreement_score_evolution_SEM[iter_errsup]) for iter_errsup in list_of_iterations],  # y2
         color=plot_color,
+        alpha=0.2,
+    )
+
+    # Plot average performance of clustering.
+    axis_plot.plot(
+        [int(iter_mean) for iter_mean in list_of_iterations],  # x
+        [dict_of_performances_evolution_per_iteration_MEAN[iter_mean] for iter_mean in list_of_iterations],  # y
+        label=plot_groundtruth_label,
+        marker="",
+        markerfacecolor="black",
+        markersize=5,
+        color="black",
+        linewidth=2,
+        linestyle="-",
+    )
+    axis_plot.fill_between(
+        x=[int(iter_err) for iter_err in list_of_iterations],  # x
+        y1=[(dict_of_performances_evolution_per_iteration_MEAN[iter_errinf] - dict_of_performances_evolution_per_iteration_SEM[iter_errinf]) for iter_errinf in list_of_iterations],  # y1
+        y2=[(dict_of_performances_evolution_per_iteration_MEAN[iter_errsup] + dict_of_performances_evolution_per_iteration_SEM[iter_errsup]) for iter_errsup in list_of_iterations],  # y2
+        color="black",
         alpha=0.2,
     )
 

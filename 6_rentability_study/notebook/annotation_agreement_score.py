@@ -77,6 +77,7 @@ def display_annotation_agreement_score(
     plot_label: str = "Accord annotation/clustering.",
     plot_groundtruth_label: str = "Similarité entre le clustering et la vérité terrain.",
     plot_color: str = "black",
+    legend_loc: str = "lower right",
     graph_filename: str = "annotation_agreement_score.png",
 ) -> Figure:
     """
@@ -89,6 +90,7 @@ def display_annotation_agreement_score(
         plot_label (str): The label of the plot. Defaults to `"Accord annotation/clustering."`.
         plot_groundtruth_label (str): The label of the groundtruth plot. Defaults to `"Similarité entre le clustering et la vérité terrain."`.
         plot_color (str): The color of plot. Defaults to `"black"`.
+        legend_loc (str): The legend location. Defaults to `"lower right"`.
         graph_filename (str): The graph filename. Default to `"annotation_agreement_score.png"`.
         
     Returns:
@@ -258,7 +260,7 @@ def display_annotation_agreement_score(
     plt.yticks(fontsize=15)
 
     # Plot the legend.
-    axis_plot.legend(fontsize=15, loc="lower right")
+    axis_plot.legend(fontsize=15, loc=legend_loc)
 
     # Plot the grid.
     axis_plot.grid(True)

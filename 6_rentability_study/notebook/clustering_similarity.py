@@ -83,6 +83,7 @@ def display_clustering_similarity(
     plot_label: str = "Différence entre deux itérations de clustering.",
     plot_groundtruth_label: str = "Similarité entre le clustering et la vérité terrain.",
     plot_color: str = "black",
+    legend_loc: str = "center right",
     graph_filename: str = "clustering_similarity.png",
 ) -> Figure:
     """
@@ -95,6 +96,7 @@ def display_clustering_similarity(
         plot_label (str): The label of the plot. Defaults to `"Différence entre deux itérations de clustering."`.
         plot_groundtruth_label (str): The label of the groundtruth plot. Defaults to `"Similarité entre le clustering et la vérité terrain."`.
         plot_color (str): The color of plot. Defaults to `"black"`.
+        legend_loc (str): The legend location. Defaults to `"center right"`.
         graph_filename (str): The graph filename. Default to `"clustering_similarity.png"`.
         
     Returns:
@@ -264,7 +266,7 @@ def display_clustering_similarity(
     plt.yticks(fontsize=15)
 
     # Plot the legend.
-    axis_plot.legend(fontsize=15, loc="center right")
+    axis_plot.legend(fontsize=15, loc=legend_loc)
 
     # Plot the grid.
     axis_plot.grid(True)

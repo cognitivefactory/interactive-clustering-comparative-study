@@ -1,4 +1,4 @@
-# Interactive Clustering : Rentability Study
+# Interactive Clustering : 6. Rentability Study
 
 The main goal of this study is to **predict the rentability** of one more iteration.
 
@@ -6,8 +6,9 @@ The main goal of this study is to **predict the rentability** of one more iterat
 ## Hypotheses
 
 This sub-repository provides an environment to carry out a comparative study of _Interactive Clustering_ implementation around one hypothese.
-- **Hypothesis One**: `TODO`.
+- **Rentability hypothesis**: _During an annotation methodology based on Interactive Clustering, it is possible to estimate the profitability of an additional iteration of the method, and thus to establish cases of stopping independent of a ground truth to obtain a satisfactory learning base._
 
+In fact, we study two options : (1) evolution of agreement between annotation and previous clustering, (2) evolution of similarity between two successive clusterings.
 
 ## Experimental protocol
 
@@ -35,9 +36,10 @@ See the export notebook of this study and paste the exported files in the `previ
 
 ## Results
 
-Due to the volume of data generated (more than 25GB), not all results are versioned on GitHub.
+Due to the volume of data generated (around 2 GB), not all results are versioned on GitHub.
 
-However, a summary of results are stored in `results`.
+- results are zipped in a `.tar.gz` file and versioned on Zenodo : `TODO`.
+- a summary of results are stored in `results`.
 
 In order to make a save in a `.tar.gz` file, you can use the following command:
 ```bash
@@ -47,4 +49,4 @@ tar -czf 6_rentability_study.tar.gz experiments/ notebook/ previous/ results/ RE
 
 ## Scientific contribution
 
-`TODO`
+- One section of my PhD report is dedicated to this study : `TODO`.

@@ -1,4 +1,4 @@
-# Interactive Clustering : Computation Time Study
+# Interactive Clustering : 7. Computation Time Study
 
 The main goal of this study is to **estimate the labeling error impact** on clustering results.
 
@@ -29,15 +29,16 @@ Then follow notebooks instructions.
 ## Previous data
 
 Some experiments needs data from previous studies.
-Here, constraints annotations evolutions are expected from `1_convergence_study` study.
+Here, constraints annotations are expected from `1_convergence_study` study.
 See the export notebook of this study and paste the exported files in the `previous` folder.
 
 
 ## Results
 
-Due to the volume of data generated (more than 25GB), not all results are versioned on GitHub.
+Due to the volume of data generated (around 35 GB), not all results are versioned on GitHub.
 
-However, a summary of results are stored in `results`.
+- results are zipped in a `.tar.gz` file and versioned on Zenodo : `TODO`.
+- a summary of results are stored in `results`..
 
 In order to make a save in a `.tar.gz` file, you can use the following command:
 ```bash
@@ -47,4 +48,4 @@ tar -czf 7_annotation_error_study.tar.gz experiments/ notebook/ previous/ result
 
 ## Scientific contribution
 
-`TODO`
+- One section of my PhD is dedicated to this study : `TODO`.

@@ -1,4 +1,4 @@
-# Interactive Clustering : Efficience Study
+# Interactive Clustering : 1. Efficience Study
 
 The main goal of this study is to **confirm the technical efficience** of the method by verifying its convergence to a ground truth and by finding the best implementation to increase convergence speed.
 
@@ -6,8 +6,8 @@ The main goal of this study is to **confirm the technical efficience** of the me
 ## Hypotheses
 
 This sub-repository provides an environment to carry out a comparative study of _Interactive Clustering_ implementation around two hypotheses.
-- **Hypothesis One**: _An annotation methodology based on Interactive Clustering implementation can converge to a business relevant ground truth_.
-- **Hypothesis Two**: _The convergence speed of Interactive Clustering methodology depends on several implementation parameters. We specifically study the influence of data preprocessing, data vectorization, constraints sampling strategy, and constrained clustering algorithm._
+- **Effectiveness hypothesis**: _An annotation methodology based on Interactive Clusterin_ can provide a training set for a conversational assistant that respects the vision given by the business expert during the annotation._
+- **Efficiency hypothesis**: _The convergence speed of Interactive Clustering can be optimized by coosing some settings in order to minimize operator workload. We will particularly study the influence of four factors on the number of constraints required : (1) data preprocessing, (2) data vectorization, (3) constraints sampling and (4) constrainted clustering._
 
 In fact, several implementations are available, and the main goal is to determine the best ones.
 
@@ -28,8 +28,8 @@ The study can be done on several datasets, and observations can be done several 
 During _Interactive Clustering_ iterations, the relevance of data segmentation is measured using homogeneity, completeness, and v-measure, computed on the clustering results of each iteration.
 Measures are obtained through comparison with the ground truth, corresponding to annotations by business experts prior to the experiment (with no computer guidance). 
 
-To analyze the convergence speed and the effect size of the implementation parameters on the number of annotations required, the authors perform repeated measures ANOVA in R.
-Post-hoc comparisons are performed using Tukey HSD procedure.
+To analyze the convergence speed and the effect size of the implementation parameters on the number of annotations required, the authors perform repeated measures `ANOVA` in `R`.
+Post-hoc comparisons are performed using `Tukey HSD` procedure.
 Finally, the optimal set of parameters according to statistical analysis is selected to train a candidate intents classifier.
 
 
@@ -40,23 +40,24 @@ Finally, the optimal set of parameters according to statistical analysis is sele
 3. When all experiments are run, main effects and post hoc analyzes are made, based on experiment results.
 4. Then, best parameters to get the ground truth can be deduced.
 
-All these steps are implemented in Python and R, and can be run within Jupyter Notebooks.
+All these steps are implemented in `Python` and `R`, and can be run within `Jupyter Notebooks`.
 
 
 ## Installation and Execution
 
-Follow the description of `README.md` repository file in order to setup your Python/R environment.
+Follow the description of `README.md` repository file in order to setup your `Python`/`R` environment.
 
 Then follow notebooks instructions.
 
 
 ## Results
 
-Due to the volume of data generated (more than 25GB), not all results are versioned on GitHub.
+Due to the volume of data generated (around 2 GB), not all results are versioned on GitHub.
 
-However, a summary of results are stored in `results`.
+- results are zipped in a `.tar.gz` file and versioned on Zenodo : `TODO`.
+- a summary of results are stored in `results`.
 
-In order to make a save in a `.tar.gz` file, you can use the following command:
+NB: In order to make a save in a `.tar.gz` file, you can use the following command:
 ```bash
 tar -czf 1_efficience_study.tar.gz experiments/ notebook/ results/ README.md
 ```
@@ -64,4 +65,5 @@ tar -czf 1_efficience_study.tar.gz experiments/ notebook/ results/ README.md
 
 ## Scientific contribution
 
-A research paper is dedicated to this study : `Schild, E., Durantin, G., Lamirel, J., & Miconi, F. (2022). Iterative and Semi-Supervised Design of Chatbots Using Interactive Clustering. International Journal of Data Warehousing and Mining (IJDWM), 18(2), 1-19. http://doi.org/10.4018/IJDWM.298007. <hal-03648041>.`
+- A research paper is dedicated to this study : `Schild, E., Durantin, G., Lamirel, J., & Miconi, F. (2022). Iterative and Semi-Supervised Design of Chatbots Using Interactive Clustering. International Journal of Data Warehousing and Mining (IJDWM), 18(2), 1-19. http://doi.org/10.4018/IJDWM.298007. <hal-03648041>.`
+- Two sections of my PhD report are dedicated to this study : `TODO`.

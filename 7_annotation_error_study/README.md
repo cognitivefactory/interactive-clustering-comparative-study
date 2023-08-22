@@ -6,7 +6,7 @@ The main goal of this study is to **estimate the labeling error impact** on clus
 ## Hypotheses
 
 This sub-repository provides an environment to carry out a comparative study of _Interactive Clustering_ implementation around one hypothese.
-- **Hypothesis One**: `TODO`.
+- **Robustness hypothesis**: _TODO._
 
 
 ## Experimental protocol

@@ -39,7 +39,9 @@ Several studies are provided here:
 4. `constraints number`: Aims to **estimate the number of constraints needed** to have a relevant annotated dataset.
 5. `relevance`: Aims to **confirm the relevance** of clustering results.
 6. `rentability`: Aims to **predict the rentability** of one more iteration.
-7. `annotation error`: Aims to **estimate the labeling error impact** on clustering results.
+7. `conflicts fix`: Aims to **verify conflicts fixes importance** on labeling error.
+8. `annotation errors`: Aims to **estimate the labeling error impact** on clustering results.
+9. `inter annotator`: Aims to **estimate the inter-annotators score** during constraints annotation.
 
 ### Datasets
 
@@ -103,14 +105,16 @@ R -e "IRkernel::installspec()"  # r kernel spec settings.
 
 # Install Python dependencies.
 python -m pip install "cognitivefactory-interactive-clustering==0.5.4"  # interactive-clustering package.
-python -m spacy download "fr_core_news_sm-3.1.0" --direct # spacy language model (the one you want, with version "3.1.x")
+python -m spacy download "fr_core_news_sm-3.1.0" --direct # spacy language model (the one you want, with version "3.1.x").
 python -m pip install "cognitivefactory-features-maximization-metric==0.1.1"  # Features Maximization Metric.
-python -m pip install "openai"  # llm call.
+python -m pip install "datasets"  # Hugging Face datasets.
 python -m pip install "matplotlib"  # graph management.
-python -m pip install "pandas"  # data management.
+python -m pip install "openai"  # llm call.
 python -m pip install "openpyxl"  # xlsx file management.
+python -m pip install "pandas"  # data management.
+python -m pip install "simpledorff"  # krippendorff's alpha.
 python -m pip install "tqdm"  # bar progress.
-python -m pip install "xlsxwriter"  # xlsx file management
+python -m pip install "xlsxwriter"  # xlsx file management.
 
 # Install R dependencies.
 R -e "install.packages('sjstats', repos='https://cran.r-project.org/')"  # common statistics.

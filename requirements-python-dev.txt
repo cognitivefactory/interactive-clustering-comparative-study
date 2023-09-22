@@ -1,0 +1,25 @@
+# JUPYTER DEPENDENCIES
+
+jupyter  # jupyter notebook.
+ipykernel  # python kernel.
+
+# PYTHON DEV DEPENDENCIES
+
+black>=21.10b0  # code formatting.
+black[jupyter]  # code formatting.
+isort>=5.7.0  # code formatting.
+mypy>=0.812  # type checking.
+darglint>=1.5.8  # quality checking.
+autoflake>=1.4  # quality checking.
+flake8-bandit>=2.1  # quality checking.
+flake8-black>=0.2  # quality checking.
+flake8-bugbear>=21.3  # quality checking.
+flake8-builtins>=1.5  # quality checking.
+flake8-comprehensions>=3.4  # quality checking.
+flake8-docstrings>=1.6  # quality checking.
+flake8-pytest-style>=1.4  # quality checking.
+flake8-string-format>=0.3  # quality checking.
+flake8-tidy-imports>=4.2  # quality checking.
+flake8-variables-names>=0.0  # quality checking.
+pep8-naming>=0.11.1  # quality checking.
+wps-light>=0.15.2  # quality checking.

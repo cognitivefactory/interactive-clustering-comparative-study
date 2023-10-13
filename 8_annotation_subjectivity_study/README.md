@@ -1,6 +1,6 @@
-# Interactive Clustering : 8. Annotation Errors Study
+# Interactive Clustering : 8. Annotation subjectivity Study
 
-The main goal of this study is to **estimate the labeling error impact** on clustering results.
+The main goal of this study is to **estimate the labeling difference impact** on clustering results.
 
 
 ## Hypotheses
@@ -42,7 +42,7 @@ Due to the volume of data generated (around 35 GB), not all results are versione
 
 In order to make a save in a `.tar.gz` file, you can use the following command:
 ```bash
-tar -czf 8_annotation_error_study.tar.gz experiments/ notebook/ previous/ results/ README.md
+tar -czf 8_annotation_subjectivity_study.tar.gz experiments/ notebook/ previous/ results/ README.md
 ```
 
 

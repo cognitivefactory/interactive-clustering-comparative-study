@@ -2,7 +2,7 @@
 
 """
 * Name:         faker
-* Description:  A set of method to fake a dataset for interactive clustering annotation errors study environments.
+* Description:  A set of method to fake a dataset for interactive clustering annotation subjectivity study environments.
 * Author:       Erwan Schild
 * Created:      09/11/2022
 * Licence:      CeCILL (https://cecill.info/licences.fr.html)

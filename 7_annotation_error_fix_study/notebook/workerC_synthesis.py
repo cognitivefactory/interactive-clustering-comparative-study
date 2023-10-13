@@ -2,7 +2,7 @@
 
 """
 * Name:         workerC_synthesis
-* Description:  Worker to synthesize results of interactive clustering conflicts fix study experiments in an CSV file.
+* Description:  Worker to synthesize results of interactive clustering annotation errors and conflict fix study experiments in an CSV file.
 * Author:       Erwan Schild
 * Created:      24/05/2021
 * Licence:      CeCILL (https://cecill.info/licences.fr.html)

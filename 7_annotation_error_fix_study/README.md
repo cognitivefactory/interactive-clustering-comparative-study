@@ -1,6 +1,6 @@
-# Interactive Clustering : 7. Conflicts fix Study
+# Interactive Clustering : 7. Annotation errors and conflict fix Study
 
-The main goal of this study is to **verify conflicts fixes importance** on labeling error.
+The main goal of this study is to **evaluate errors impact** and **verify conflicts fix importance** on labeling.
 
 
 ## Hypotheses
@@ -42,7 +42,7 @@ Due to the volume of data generated (around 35 GB), not all results are versione
 
 In order to make a save in a `.tar.gz` file, you can use the following command:
 ```bash
-tar -czf 7_conflicts_fix_study.tar.gz experiments/ notebook/ previous/ results/ README.md
+tar -czf 7_annotation_error_fix_study.tar.gz experiments/ notebook/ previous/ results/ README.md
 ```
 
 

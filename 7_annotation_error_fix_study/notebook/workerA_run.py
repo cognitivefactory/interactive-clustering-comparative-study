@@ -2,7 +2,7 @@
 
 """
 * Name:         workerA_run
-* Description:  Worker to simulate an interactive clustering with some annotations conflicts to fix.
+* Description:  Worker to simulate an interactive clustering with some annotation errors and conflicts to fix.
 * Author:       Erwan Schild
 * Created:      24/05/2021
 * Licence:      CeCILL (https://cecill.info/licences.fr.html)

@@ -2,7 +2,7 @@
 
 """
 * Name:         listing_envs
-* Description:  A set of method to list created interactive clustering conflicts fix study environments.
+* Description:  A set of method to list created interactive clustering annotation errors and conflict fix study environments.
 * Author:       Erwan Schild
 * Created:      24/10/2022
 * Licence:      CeCILL (https://cecill.info/licences.fr.html)

@@ -39,8 +39,8 @@ Several studies are provided here:
 4. `constraints number`: Aims to **estimate the number of constraints needed** to have a relevant annotated dataset.
 5. `relevance`: Aims to **confirm the relevance** of clustering results.
 6. `rentability`: Aims to **predict the rentability** of one more iteration.
-7. `conflicts fix`: Aims to **verify conflicts fixes importance** on labeling error.
-8. `annotation errors`: Aims to **estimate the labeling error impact** on clustering results.
+7. `annotation errors and conflicts fix`: Aims to **evaluate errors impact** and **verify conflicts fix importance** on labeling.
+8. `annotation subjectivity`: Aims to **estimate the labeling difference impact** on clustering results.
 9. `inter annotator`: Aims to **estimate the inter-annotators score** during constraints annotation.
 
 ### Datasets

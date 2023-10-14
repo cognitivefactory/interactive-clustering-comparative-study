@@ -113,6 +113,7 @@ python -m pip install "openai"  # llm call.
 python -m pip install "openpyxl"  # xlsx file management.
 python -m pip install "pandas"  # data management.
 python -m pip install "simpledorff"  # krippendorff's alpha.
+python -m pip install "tabulate"  # pandas display.
 python -m pip install "tqdm"  # bar progress.
 python -m pip install "xlsxwriter"  # xlsx file management.
 

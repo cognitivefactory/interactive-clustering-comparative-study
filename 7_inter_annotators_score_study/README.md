@@ -1,12 +1,14 @@
-# Interactive Clustering : 7. Annotation errors and conflict fix Study
+# Interactive Clustering : 7. Inter-annotators Score Study
 
-The main goal of this study is to **evaluate errors impact** and **verify conflicts fix importance** on labeling.
+The main goal of this study is to **estimate the inter-annotators score** during constraints annotation.
 
 
 ## Hypotheses
 
 This sub-repository provides an environment to carry out a comparative study of _Interactive Clustering_ implementation around one hypothese.
 - **Robustness hypothesis**: _TODO._
+
+In this study, we focus on annotation time.
 
 
 ## Experimental protocol
@@ -26,23 +28,16 @@ Follow the description of `README.md` repository file in order to setup your Pyt
 Then follow notebooks instructions.
 
 
-## Previous data
-
-Some experiments needs data from previous studies.
-Here, constraints annotations are expected from `1_convergence_study` study.
-See the export notebook of this study and paste the exported files in the `previous` folder.
-
-
 ## Results
 
-Due to the volume of data generated (around 35 GB), not all results are versioned on GitHub.
+Due to the volume of data generated (around 1 GB), not all results are versioned on GitHub.
 
 - results are zipped in a `.tar.gz` file and versioned on Zenodo : `TODO`.
 - a summary of results are stored in `results`..
 
 In order to make a save in a `.tar.gz` file, you can use the following command:
 ```bash
-tar -czf 7_annotation_error_fix_study.tar.gz experiments/ notebook/ previous/ results/ README.md
+tar -czf 7_inter_annotators_score_study.tar.gz experiments/ notebook/ results/ README.md
 ```
 
 

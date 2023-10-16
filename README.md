@@ -39,9 +39,9 @@ Several studies are provided here:
 4. `constraints number`: Aims to **estimate the number of constraints needed** to have a relevant annotated dataset.
 5. `relevance`: Aims to **confirm the relevance** of clustering results.
 6. `rentability`: Aims to **predict the rentability** of one more iteration.
-7. `annotation errors and conflicts fix`: Aims to **evaluate errors impact** and **verify conflicts fix importance** on labeling.
-8. `annotation subjectivity`: Aims to **estimate the labeling difference impact** on clustering results.
-9. `inter annotator`: Aims to **estimate the inter-annotators score** during constraints annotation.
+7. `inter annotator`: Aims to **estimate the inter-annotators score** during constraints annotation.
+8. `annotation errors and conflicts fix`: Aims to **evaluate errors impact** and **verify conflicts fix importance** on labeling.
+9. `annotation subjectivity`: Aims to **estimate the labeling difference impact** on clustering results.
 
 ### Datasets
 
@@ -50,8 +50,9 @@ Used datasets are:
 - "_French trainset for chatbots dealing with usual requests on bank cards_" (Schild, 2021): This dataset represents examples of common customer requests relating to bank cards management. It can be used as a training set for a small chatbot intended to process these usual requests.
 - "_MLSUM: The Multilingual Summarization Corpus_" (Scialom et al., 2020): A subset of newspapers articles in most popular category. It can be used to train a small newspaper classifier.
 
+## Execution of experiments
 
-## Requirements
+### Requirements
 
 Interactive Clustering Comparative Study requires:
 
@@ -79,7 +80,7 @@ For Windows, it can be:
 </details>
 
 
-## Installation
+### Installation
 
 Create a virtual environment with `venv`:
 ```bash
@@ -152,8 +153,25 @@ python -m pip install "pep8-naming>=0.11.1"  # quality checking.
 python -m pip install "wps-light>=0.15.2"  # quality checking.
 ```
 
+### Results
 
-## Execution
+All results are available on Zenodo (https://doi.org/10.5281/zenodo.5648255).
+
+_Warning_ ! These experiments can use a huge disk space and contain hundreds or even thousands of files (1 per execution attempt). See the table below before extracting the files.
+
+| STUDY NAME                        | FOLDER SIZE | `.tar.gz` FILE SIZE |
+|-----------------------------------|------------:|--------------------:|
+| `1_efficience_study`              |      1.4 Go |              0.7 Go |
+| `2_computation_time_study`        |      1.1 Go |              0.1 Go |
+| `3_annotation_time_study`         |      0.1 Go |              0.1 Go |
+| `4_constraints_number_study`      |     12.0 Go |              2.7 Go |
+| `5_relevance_study`               |      0.1 Go |              0.1 Go |
+| `6_rentability_study`             |      1.3 Go |              0.1 Go |
+| `7_inter_annotators_score_study`  |      0.1 Go |              0.1 Go |
+| `8_annotation_error_fix_study`    |     28.0 Go |              3.5 Go |
+| `9_annotation_subjectivity_study` |     82.0 Go |             11.3 Go |
+
+### Execution
 
 Launch `Jupyter Notebook` with:
 ```bash
@@ -170,7 +188,7 @@ Use the command `tar -czf ../experiments.tar.gz ../experiments/` to wrap results
 and use `tar -xzf ../experiments.tar.gz -C ../` to unwrap them.
 
 
-## Development
+### Contribution to development
 
 To check code quality of scripts and notebooks:
 ```bash
@@ -181,14 +199,25 @@ To check code quality of scripts and notebooks:
 ## References
 
 - **Interactive Clustering**:
-    - Theory: `Schild, E., Durantin, G., Lamirel, J.C., & Miconi, F. (2021). Conception itérative et semi-supervisée d'assistants conversationnels par regroupement interactif des questions. In EGC 2021 - 21èmes Journées Francophones Extraction et Gestion des Connaissances. Edition RNTI. <hal-03133007>`
-	- Implementation: `Schild, E. (2021). cognitivefactory/interactive-clustering. Zenodo. https://doi.org/10.5281/zenodo.4775251`
+	- Theory: `Schild, E., Durantin, G., Lamirel, J.C., & Miconi, F. (2021). Conception itérative et semi-supervisée d'assistants conversationnels par regroupement interactif des questions. In EGC 2021 - 21èmes Journées Francophones Extraction et Gestion des Connaissances. Edition RNTI. <hal-03133007>` ;
+	- Interactive Clustering implementation: `Schild, E. (2021). cognitivefactory/interactive-clustering. Zenodo. https://doi.org/10.5281/zenodo.4775251`
+	- Interactive Clustering web application: `SCHILD, E., TTremble & Clementine-Msk. (2022). cognitivefactory/interactive-clustering-gui. Zenodo. https://doi.org/10.5281/zenodo.4775270`
+	- Features Maximization Metric implementation: `SCHILD, E. (2023). Cognitivefactory/Features-Maximization-Metric. Zenodo. https://doi.org/10.5281/zenodo.7646382`
 
 - **Datasets**:
-    - Bank cards management: `Schild, E. (2021). French trainset for chatbots dealing with usual requests on bank cards [Data set]. Zenodo. http://doi.org/10.5281/zenodo.4769949.`
-	- MLSUM: `Scialom, T., Dray, P.-A., Lamprier, S., Piwowarski, B., & Staiano, J. (2020). MLSUM: The Multilingual Summarization Corpus (Version 1). arXiv. https://doi.org/10.48550/ARXIV.2004.14900.`
+	- Bank cards management: `Schild, E. (2021). French trainset for chatbots dealing with usual requests on bank cards [Data set]. Zenodo. http://doi.org/10.5281/zenodo.4769949` ;
+	- MLSUM: `Erwan SCHILD, & Marie ADLER. (2023). Subset of 'MLSUM: The Multilingual Summarization Corpus' for constraints annotation experiment (1.0.0 [subset: fr+train+filtered]) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.8399301`.
 
 - **Experimental protocol**:
-    - Evaluation with _Sklearn_: `Buitinck, L., Louppe, G., Blondel, M., Pedregosa, F., Mueller, A., Grisel, O., Niculae, V., Prettenhofer, P., Gramfort, A., Grobler, J., Layton, R., Vanderplas, J., Joly, A., Holt, B., & Varoquaux, G. (2013). API design for machine learning software: experiments from the scikit-learn project. ArXiv, abs/1309.0238.`
-    - Visualization with _matplotlib_: `Caswell, T. A., Droettboom, M., Lee, A., Sales de Andrade, E., Hunter, J., Hoffmann, T., & Ivanov, P. (2021). matplotlib/matplotlib: REL: v3.3.4 (Version v3.3.4). Zenodo. http://doi.org/10.5281/zenodo.4475376`
-    - Jupyter Notebooks: `Kluyver, T., Ragan-Kelley, B., Pérez, F., Granger, B., Bussonnier, M., Frederic, J., Kelley, K., Hamrick, J., Grout, J., Corlay, S., Ivanov, P., Avila, D., Abdalla, S., Willing, C. & Jupyter development team, (2016) Jupyter Notebooks - a publishing format for reproducible computational workflows. In Positioning and Power in Academic Publishing: Players, Agents and Agendas. IOS Press. pp. 87-90 . ⟨doi:10.3233/978-1-61499-649-1-87⟩.`
+	- _Jupyter Notebooks_: `Kluyver, T., Ragan-Kelley, B., Pérez, F., Granger, B., Bussonnier, M., Frederic, J., Kelley, K., Hamrick, J., Grout, J., Corlay, S., Ivanov, P., Avila, D., Abdalla, S., Willing, C. & Jupyter development team, (2016) Jupyter Notebooks - a publishing format for reproducible computational workflows. In Positioning and Power in Academic Publishing: Players, Agents and Agendas. IOS Press. pp. 87-90 . https://doi.org/10.3233/978-1-61499-649-1-87`.
+	- _Sklearn_: `Buitinck, L., Louppe, G., Blondel, M., Pedregosa, F., Mueller, A., Grisel, O., Niculae, V., Prettenhofer, P., Gramfort, A., Grobler, J., Layton, R., Vanderplas, J., Joly, A., Holt, B., & Varoquaux, G. (2013). API design for machine learning software: experiments from the scikit-learn project. ArXiv, abs/1309.0238` ;
+	- _statsmodel_ `Seabold, S., & Perktold, J. (2010). Statsmodels : Econometric and Statistical Modeling with Python, 92-96. https://doi.org/10.25080/Majora-92bf1922-011`
+	- _simpledorff_: `Perry, T. (2021). LightTag : Text Annotation Platform. Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing : System Demonstrations, 20-27. https://aclanthology.org/2021.emnlp-demo.3`
+	- _matplotlib_: `Caswell, T. A., Droettboom, M., Lee, A., Sales de Andrade, E., Hunter, J., Hoffmann, T., & Ivanov, P. (2021). matplotlib/matplotlib: REL: v3.3.4 (Version v3.3.4). Zenodo. https://doi.org/10.5281/zenodo.4475376` ;
+	- _Python_: `Van Rossum, G., & Drake, F. L. (2009). Python 3 Reference Manual (CreateSpace).`
+	- _R_: `Team, R. C. (2017). R : A language and environment for statistical computing. R Foundation for Statistical Computing. Vienna, Austria. https://www.R-project.org/`
+
+
+## How to cite
+	
+`Erwan SCHILD. (2021). cognitivefactory/interactive-clustering-comparative-study. Zenodo. https://doi.org/10.5281/zenodo.5648255`

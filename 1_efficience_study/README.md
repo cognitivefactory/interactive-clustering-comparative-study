@@ -54,7 +54,7 @@ Then follow notebooks instructions.
 
 Due to the volume of data generated (around 2 GB), not all results are versioned on GitHub.
 
-- results are zipped in a `.tar.gz` file and versioned on Zenodo : `TODO`.
+- results are zipped in a `.tar.gz` file and versioned on Zenodo : `Schild, E. (2021). cognitivefactory/interactive-clustering-comparative-study. Zenodo. https://doi.org/10.5281/zenodo.5648255`.
 - a summary of results are stored in `results`.
 
 NB: In order to make a save in a `.tar.gz` file, you can use the following command:
@@ -66,4 +66,4 @@ tar -czf 1_efficience_study.tar.gz experiments/ notebook/ results/ README.md
 ## Scientific contribution
 
 - A research paper is dedicated to this study : `Schild, E., Durantin, G., Lamirel, J., & Miconi, F. (2022). Iterative and Semi-Supervised Design of Chatbots Using Interactive Clustering. International Journal of Data Warehousing and Mining (IJDWM), 18(2), 1-19. http://doi.org/10.4018/IJDWM.298007. <hal-03648041>.`
-- Two sections of my PhD report are dedicated to this study : `TODO`.
+- Two sections of my PhD report are dedicated to this study : `Schild, E. (2024, in press). De l'Importance de Valoriser l'Expertise Humaine dans l’Annotation : Application à la Modélisation de Textes en Intentions à l'aide d’un Clustering Interactif. Université de Lorraine.` (Sections 4.1 and 4.2)

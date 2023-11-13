@@ -21,15 +21,16 @@ Several instructions are given to annotators:
 - *Objective of the experiment*: "I want to know the time required to annotate a certain number of constraints; In other words: To annotate 1000 constraints, how long do I need?" ;
 - *Annotation instructions*: "Perform at least 15 minutes of annottaion for regularity; If possible, isolate yourself in order to be not disturbed and to not distort the results; For each series, note the annotated time and number of constraints; If you don't know what to annotate (too ambiguous, unknown vocabulary, ...), go to the next one without annotating (you are supposed to be press experts!)".
 
-Then, GLM modelisations are made on annotation time per bacth size and speed evolution over session..
+Then, GLM modelisations are made on annotation time per bacth size and speed evolution over session.
 
 ## Implementation
 
 1. Constraints to annotate are randomly selected.
-2. Annotation project can be imported in the annotation app with zipped archive.
+2. Annotation project can be imported in the annotation app with zipped archive, and operators can use the app to annotate constraints.
 3. After annotation, time modelization are made based on experiment results.
 4. Then, several graphs are made to represent annotation time.
 
+All these steps are implemented in `Python`, and can be run within `Jupyter Notebooks`.
 
 ## Installation and Execution
 
@@ -44,7 +45,7 @@ Then follow notebooks instructions.
 
 Due to the volume of data generated (around 1 GB), not all results are versioned on GitHub.
 
-- results are zipped in a `.tar.gz` file and versioned on Zenodo : `TODO`.
+- results are zipped in a `.tar.gz` file and versioned on Zenodo : `Schild, E. (2021). cognitivefactory/interactive-clustering-comparative-study. Zenodo. https://doi.org/10.5281/zenodo.5648255`.
 - a summary of results are stored in `results`.
 
 In order to make a save in a `.tar.gz` file, you can use the following command:
@@ -55,4 +56,4 @@ tar -czf 3_annotation_time_study.tar.gz experiments/ notebook/ results/ README.m
 
 ## Scientific contribution
 
-- One section of my PhD report is dedicated to this study : `TODO`.
+- One section of my PhD report is dedicated to this study : `Schild, E. (2024, in press). De l'Importance de Valoriser l'Expertise Humaine dans l’Annotation : Application à la Modélisation de Textes en Intentions à l'aide d’un Clustering Interactif. Université de Lorraine.` (Section 4.3)

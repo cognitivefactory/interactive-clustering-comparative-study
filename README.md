@@ -155,7 +155,7 @@ python -m pip install "wps-light>=0.15.2"  # quality checking.
 
 ### Results
 
-All results are available on Zenodo (https://doi.org/10.5281/zenodo.5648255).
+All results are zipped in `.tar.gz` files and versioned on Zenodo: `Schild, E. (2021). cognitivefactory/interactive-clustering-comparative-study. Zenodo. https://doi.org/10.5281/zenodo.5648255`.
 
 _Warning_ ! These experiments can use a huge disk space and contain hundreds or even thousands of files (1 per execution attempt). See the table below before extracting the files.
 
@@ -199,6 +199,7 @@ To check code quality of scripts and notebooks:
 ## References
 
 - **Interactive Clustering**:
+	- PhD report: `Schild, E. (2024, in press). De l'Importance de Valoriser l'Expertise Humaine dans l’Annotation : Application à la Modélisation de Textes en Intentions à l'aide d’un Clustering Interactif. Université de Lorraine.` ;
 	- Theory: `Schild, E., Durantin, G., Lamirel, J.C., & Miconi, F. (2021). Conception itérative et semi-supervisée d'assistants conversationnels par regroupement interactif des questions. In EGC 2021 - 21èmes Journées Francophones Extraction et Gestion des Connaissances. Edition RNTI. <hal-03133007>` ;
 	- Interactive Clustering implementation: `Schild, E. (2021). cognitivefactory/interactive-clustering. Zenodo. https://doi.org/10.5281/zenodo.4775251`
 	- Interactive Clustering web application: `SCHILD, E., TTremble & Clementine-Msk. (2022). cognitivefactory/interactive-clustering-gui. Zenodo. https://doi.org/10.5281/zenodo.4775270`
@@ -220,4 +221,4 @@ To check code quality of scripts and notebooks:
 
 ## How to cite
 	
-`Erwan SCHILD. (2021). cognitivefactory/interactive-clustering-comparative-study. Zenodo. https://doi.org/10.5281/zenodo.5648255`
+`Schild, E. (2021). cognitivefactory/interactive-clustering-comparative-study. Zenodo. https://doi.org/10.5281/zenodo.5648255`

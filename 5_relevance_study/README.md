@@ -34,10 +34,12 @@ Business relevance annotations are redo and are focused on summary (not on clust
 ## Implementation
 
 1. Get previous results of convergence, and choose some iterations to analyze.
-2. Perform manuel business relevance annotation.
+2. Perform manual business relevance annotation.
 3. Compute linguistic analysis, then perform semi-assisted business relevance annotation.
 4. Call large language model to resume topics in clusters, then perform assisted business relevance annotation.
 5. Compare each methods.
+
+All these steps are implemented in `Python`, and can be run within `Jupyter Notebooks`.
 
 
 ## Installation and Execution
@@ -62,7 +64,7 @@ See the export notebook of this study and paste the exported files in the `previ
 
 Due to the volume of data generated (around 1 GB), not all results are versioned on GitHub.
 
-- results are zipped in a `.tar.gz` file and versioned on Zenodo : `TODO`.
+- results are zipped in a `.tar.gz` file and versioned on Zenodo : `Schild, E. (2021). cognitivefactory/interactive-clustering-comparative-study. Zenodo. https://doi.org/10.5281/zenodo.5648255`.
 - a summary of results are stored in `results`.
 
 In order to make a save in a `.tar.gz` file, you can use the following command:
@@ -73,4 +75,4 @@ tar -czf 5_relevance_study.tar.gz experiments/ notebook/ previous/ results/ READ
 
 ## Scientific contribution
 
-- One section of my PhD report is dedicated to this study : `TODO`.
+- One section of my PhD report is dedicated to this study : `Schild, E. (2024, in press). De l'Importance de Valoriser l'Expertise Humaine dans l’Annotation : Application à la Modélisation de Textes en Intentions à l'aide d’un Clustering Interactif. Université de Lorraine.` (Section 4.4)

@@ -5,9 +5,10 @@ ipykernel  # python kernel.
 
 # PYTHON DEPENDENCIES
 
-cognitivefactory-interactive-clustering==0.5.4  # interactive clustering.
-https://github.com/explosion/spacy-models/releases/download/fr_core_news_md-3.1.0/fr_core_news_md-3.1.0.tar.gz  # spacy language model (the one you want, with version "3.1").
-cognitivefactory-features-maximization-metric==0.1.1  # Features Maximization Metric.
+cognitivefactory-interactive-clustering>=1.0.0  # interactive clustering.
+fr-core-news-md @ https://github.com/explosion/spacy-models/releases/download/fr_core_news_md-3.4.0/fr_core_news_md-3.4.0.tar.gz  # spacy language model (the one you want, with version "3.4.x").
+en-core-web-md @ https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.4.0/en_core_web_md-3.4.0.tar.gz  # spacy language model (the one you want, with version "3.4.x").
+cognitivefactory-features-maximization-metric>=1.0.0  # Features Maximization Metric.
 datasets  # Hugging Face datasets.
 matplotlib  # graph management.
 openai  # llm call.

@@ -105,9 +105,10 @@ R -e "install.packages('pillar', repos='https://cran.r-project.org/')"
 R -e "IRkernel::installspec()"  # r kernel spec settings.
 
 # Install Python dependencies.
-python -m pip install "cognitivefactory-interactive-clustering==0.5.4"  # interactive-clustering package.
-python -m spacy download "fr_core_news_sm-3.1.0" --direct # spacy language model (the one you want, with version "3.1.x").
-python -m pip install "cognitivefactory-features-maximization-metric==0.1.1"  # Features Maximization Metric.
+python -m pip install "cognitivefactory-interactive-clustering>=1.0.0"  # interactive-clustering package.
+python -m pip install "fr-core-news-md @ https://github.com/explosion/spacy-models/releases/download/fr_core_news_md-3.4.0/fr_core_news_md-3.4.0.tar.gz" # spacy language model (the one you want, with version "3.4.x").
+python -m pip install "en-core-web-md @ https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.4.0/en_core_web_md-3.4.0.tar.gz"  # spacy language model (the one you want, with version "3.4.x").
+python -m pip install "cognitivefactory-features-maximization-metric>=1.0.0"  # Features Maximization Metric.
 python -m pip install "datasets"  # Hugging Face datasets.
 python -m pip install "matplotlib"  # graph management.
 python -m pip install "openai"  # llm call.
@@ -199,8 +200,10 @@ To check code quality of scripts and notebooks:
 ## References
 
 - **Interactive Clustering**:
-	- PhD report: `Schild, E. (2024, in press). De l'Importance de Valoriser l'Expertise Humaine dans l’Annotation : Application à la Modélisation de Textes en Intentions à l'aide d’un Clustering Interactif. Université de Lorraine.` ;
-	- Theory: `Schild, E., Durantin, G., Lamirel, J.C., & Miconi, F. (2021). Conception itérative et semi-supervisée d'assistants conversationnels par regroupement interactif des questions. In EGC 2021 - 21èmes Journées Francophones Extraction et Gestion des Connaissances. Edition RNTI. <hal-03133007>` ;
+	- PhD report: `Schild, E. (2024, in press). De l'Importance de Valoriser l'Expertise Humaine dans l'Annotation : Application à la Modélisation de Textes en Intentions à l'aide d'un Clustering Interactif. Université de Lorraine.` ;
+    - First presentation: `Schild, E., Durantin, G., Lamirel, J.C., & Miconi, F. (2021). Conception itérative et semi-supervisée d'assistants conversationnels par regroupement interactif des questions. In EGC 2021 - 21èmes Journées Francophones Extraction et Gestion des Connaissances. Edition RNTI. <hal-03133007>.`
+    - Theoretical study: `Schild, E., Durantin, G., Lamirel, J., & Miconi, F. (2022). Iterative and Semi-Supervised Design of Chatbots Using Interactive Clustering. International Journal of Data Warehousing and Mining (IJDWM), 18(2), 1-19. http://doi.org/10.4018/IJDWM.298007. <hal-03648041>.`
+    - Methodological discussion: `Schild, E., Durantin, G., & Lamirel, J.C. (2021). Concevoir un assistant conversationnel de manière itérative et semi-supervisée avec le clustering interactif. In Atelier - Fouille de Textes - Text Mine 2021 - En conjonction avec EGC 2021. <hal-03133060>.`
 	- Interactive Clustering implementation: `Schild, E. (2021). cognitivefactory/interactive-clustering. Zenodo. https://doi.org/10.5281/zenodo.4775251`
 	- Interactive Clustering web application: `SCHILD, E., TTremble & Clementine-Msk. (2022). cognitivefactory/interactive-clustering-gui. Zenodo. https://doi.org/10.5281/zenodo.4775270`
 	- Features Maximization Metric implementation: `SCHILD, E. (2023). Cognitivefactory/Features-Maximization-Metric. Zenodo. https://doi.org/10.5281/zenodo.7646382`

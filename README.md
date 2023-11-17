@@ -26,7 +26,7 @@ Thus, at each step of the process :
 <p align="center">
 	<i align="center" style="font-size: smaller; color:grey">Simplified diagram of how Interactive Clustering works.</i>
 	</br>
-	<img src="docs/figures/interactive-clustering.png" alt="Simplified diagram of how Interactive Clustering works." width="60%"/>
+	<img src="docs/figures/interactive-clustering.png" alt="Simplified diagram of how Interactive Clustering works." width="75%"/>
 	
 </p>
 <p align="center">
@@ -44,7 +44,7 @@ For more details, read its [main documentation](https://cognitivefactory.github.
 <p align="center">
 	<i style="font-size: smaller; color:grey">Welcome page of Interactive Clustering Web Application.</i>
 	</br>
-	<img src="docs/figures/interactive-clustering-gui-welcome-page.png" alt="Welcome page of Interactive Clustering Web Application." width="60%"/>
+	<img src="docs/figures/interactive-clustering-gui-welcome-page.png" alt="Welcome page of Interactive Clustering Web Application." width="75%"/>
 </p>
 
 ### Description of studies
@@ -64,7 +64,7 @@ Several studies are provided here:
 <p align="center">
 	<i style="font-size: smaller; color:grey">Organizational diagram of the different Comparative Studies of Interactive Clustering.</i>
 	</br>
-	<img src="docs/figures/interactive-clustering-comparative-study.png" alt="Organizational diagram of the different comparative studies of Interactive Clustering." width="60%"/>
+	<img src="docs/figures/interactive-clustering-comparative-study.png" alt="Organizational diagram of the different comparative studies of Interactive Clustering." width="75%"/>
 </p>
 
 > All these studies are used in the following PhD report : [Schild, 2024 (in press)](https://github.com/erwanschild/interactive-clustering-phd-report)

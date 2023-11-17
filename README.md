@@ -35,16 +35,18 @@ Thus, at each step of the process :
 	<img src="docs/figures/interactive-clustering-example.png" alt="Example of iterations of Interactive Clustering." width="90%"/>
 </p>
 
-An implementation of this methodology is available here: [cognitivefactory-interactive-clustering](https://github.com/cognitivefactory/interactive-clustering).
+An implementation of this methodology is available on GitHub: [cognitivefactory/interactive-clustering](https://github.com/cognitivefactory/interactive-clustering).
 For more details, read its [main documentation](https://cognitivefactory.github.io/interactive-clustering/).
 
-Furthermore, a web application based on Interactive Clustering Methodologoy is available here: [cognitivefactory-interactive-clustering-gui](https://github.com/cognitivefactory/interactive-clustering-gui).
+Furthermore, a web application based on Interactive Clustering Methodologoy is available on GitHub: [cognitivefactory/interactive-clustering-gui](https://github.com/cognitivefactory/interactive-clustering-gui).
 For more details, read its [main documentation](https://cognitivefactory.github.io/interactive-clustering-gui/).
 
 <p align="center">
-	<i style="font-size: smaller; color:grey">Welcome page of Interactive Clustering Web Application.</i>
-	</br>
-	<img src="docs/figures/interactive-clustering-gui-welcome-page.png" alt="Welcome page of Interactive Clustering Web Application." width="75%"/>
+	<a href="https://github.com/cognitivefactory/interactive-clustering-gui">
+		<i style="font-size: smaller; color:grey">Welcome page of Interactive Clustering Web Application.</i>
+		</br>
+		<img src="docs/figures/interactive-clustering-gui-welcome-page.png" alt="Welcome page of Interactive Clustering Web Application." width="75%"/>
+	</a>
 </p>
 
 ### Description of studies
@@ -226,7 +228,7 @@ To check code quality of scripts and notebooks:
 ## References
 
 - **Interactive Clustering**:
-	- PhD report: `Schild, E. (2024, in press). De l'Importance de Valoriser l'Expertise Humaine dans l'Annotation : Application à la Modélisation de Textes en Intentions à l'aide d'un Clustering Interactif. Université de Lorraine.` ;
+	- PhD report: `Schild, E. (2024, in press). De l'Importance de Valoriser l'Expertise Humaine dans l'Annotation : Application à la Modélisation de Textes en Intentions à l'aide d'un Clustering Interactif. Université de Lorraine.`
     - First presentation: `Schild, E., Durantin, G., Lamirel, J.C., & Miconi, F. (2021). Conception itérative et semi-supervisée d'assistants conversationnels par regroupement interactif des questions. In EGC 2021 - 21èmes Journées Francophones Extraction et Gestion des Connaissances. Edition RNTI. <hal-03133007>.`
     - Theoretical study: `Schild, E., Durantin, G., Lamirel, J., & Miconi, F. (2022). Iterative and Semi-Supervised Design of Chatbots Using Interactive Clustering. International Journal of Data Warehousing and Mining (IJDWM), 18(2), 1-19. http://doi.org/10.4018/IJDWM.298007. <hal-03648041>.`
     - Methodological discussion: `Schild, E., Durantin, G., & Lamirel, J.C. (2021). Concevoir un assistant conversationnel de manière itérative et semi-supervisée avec le clustering interactif. In Atelier - Fouille de Textes - Text Mine 2021 - En conjonction avec EGC 2021. <hal-03133060>.`

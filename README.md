@@ -31,6 +31,7 @@ Thus, at each step of the process :
 </p>
 <p align="center">
 	<i style="font-size: smaller; color:grey">Example of iterations of Interactive Clustering.</i>
+	</br>
 	<img src="docs/figures/interactive-clustering-example.png" alt="Example of iterations of Interactive Clustering." width="90%"/>
 </p>
 

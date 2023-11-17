@@ -23,11 +23,25 @@ Thus, at each step of the process :
 
 - the machine offers a corrected and more relevant data partitioning for the next step.
 
+<figure align="center">
+	<img src="docs/figures/interactive-clustering.png" alt="Simplified diagram of how Interactive Clustering works." width="60%"/>
+	<figcaption style="font-style: italic; font-size: smaller; color:grey">Simplified diagram of how Interactive Clustering works.</figcaption>
+</figure>
+<figure align="center">
+	<img src="docs/figures/interactive-clustering-example.png" alt="Example of iterations of Interactive Clustering." width="90%"/>
+	<figcaption style="font-style: italic; font-size: smaller; color:grey">Example of iterations of Interactive Clustering.</figcaption>
+</figure>
+
 An implementation of this methodology is available here: [cognitivefactory-interactive-clustering](https://github.com/cognitivefactory/interactive-clustering).
 For more details, read its [main documentation](https://cognitivefactory.github.io/interactive-clustering/).
 
 Furthermore, a web application based on Interactive Clustering Methodologoy is available here: [cognitivefactory-interactive-clustering-gui](https://github.com/cognitivefactory/interactive-clustering-gui).
 For more details, read its [main documentation](https://cognitivefactory.github.io/interactive-clustering-gui/).
+
+<figure align="center">
+	<img src="docs/figures/interactive-clustering-gui-welcome-page.png" alt="Welcome page of Interactive Clustering Web Application." width="60%"/>
+	<figcaption style="font-style: italic; font-size: smaller; color:grey">Welcome page of Interactive Clustering Web Application.</figcaption>
+</figure>
 
 ### Description of studies
 
@@ -43,12 +57,19 @@ Several studies are provided here:
 8. `annotation errors and conflicts fix`: Aims to **evaluate errors impact** and **verify conflicts fix importance** on labeling.
 9. `annotation subjectivity`: Aims to **estimate the labeling difference impact** on clustering results.
 
+<figure align="center">
+	<img src="docs/figures/interactive-clustering-comparative-study.png" alt="Organizational diagram of the different comparative studies of Interactive Clustering." width="60%"/>
+	<figcaption style="font-style: italic; font-size: smaller; color:grey">Organizational diagram of the different Comparative Studies of Interactive Clustering.</figcaption>
+</figure>
+
+> All these studies are used in the following PhD report : [Schild, 2024 (in press)](https://github.com/erwanschild/interactive-clustering-phd-report)
+
 ### Datasets
 
 Used datasets are:
 
-- "_French trainset for chatbots dealing with usual requests on bank cards_" (Schild, 2021): This dataset represents examples of common customer requests relating to bank cards management. It can be used as a training set for a small chatbot intended to process these usual requests.
-- "_MLSUM: The Multilingual Summarization Corpus_" (Scialom et al., 2020): A subset of newspapers articles in most popular category. It can be used to train a small newspaper classifier.
+- "_French trainset for chatbots dealing with usual requests on bank cards_" ([Schild, 2021](http://doi.org/10.5281/zenodo.4769949)): This dataset represents examples of common customer requests relating to bank cards management. It can be used as a training set for a small chatbot intended to process these usual requests.
+- Subset of "_MLSUM: The Multilingual Summarization Corpus_" ([Schild et Adler, 2023](https://doi.org/10.5281/zenodo.8399301)): A subset of newspapers articles in most popular category. It can be used to train a small newspaper classifier.
 
 ## Execution of experiments
 
@@ -223,5 +244,5 @@ To check code quality of scripts and notebooks:
 
 
 ## How to cite
-	
+
 `Schild, E. (2021). cognitivefactory/interactive-clustering-comparative-study. Zenodo. https://doi.org/10.5281/zenodo.5648255`

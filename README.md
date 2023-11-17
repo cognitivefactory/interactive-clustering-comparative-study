@@ -23,14 +23,16 @@ Thus, at each step of the process :
 
 - the machine offers a corrected and more relevant data partitioning for the next step.
 
-<figure align="center">
+<p align="center">
+	<i align="center" style="font-size: smaller; color:grey">Simplified diagram of how Interactive Clustering works.</i>
+	</br>
 	<img src="docs/figures/interactive-clustering.png" alt="Simplified diagram of how Interactive Clustering works." width="60%"/>
-	<figcaption style="font-style: italic; font-size: smaller; color:grey">Simplified diagram of how Interactive Clustering works.</figcaption>
-</figure>
-<figure align="center">
+	
+</p>
+<p align="center">
+	<i style="font-size: smaller; color:grey">Example of iterations of Interactive Clustering.</i>
 	<img src="docs/figures/interactive-clustering-example.png" alt="Example of iterations of Interactive Clustering." width="90%"/>
-	<figcaption style="font-style: italic; font-size: smaller; color:grey">Example of iterations of Interactive Clustering.</figcaption>
-</figure>
+</p>
 
 An implementation of this methodology is available here: [cognitivefactory-interactive-clustering](https://github.com/cognitivefactory/interactive-clustering).
 For more details, read its [main documentation](https://cognitivefactory.github.io/interactive-clustering/).
@@ -38,10 +40,11 @@ For more details, read its [main documentation](https://cognitivefactory.github.
 Furthermore, a web application based on Interactive Clustering Methodologoy is available here: [cognitivefactory-interactive-clustering-gui](https://github.com/cognitivefactory/interactive-clustering-gui).
 For more details, read its [main documentation](https://cognitivefactory.github.io/interactive-clustering-gui/).
 
-<figure align="center">
+<p align="center">
+	<i style="font-size: smaller; color:grey">Welcome page of Interactive Clustering Web Application.</i>
+	</br>
 	<img src="docs/figures/interactive-clustering-gui-welcome-page.png" alt="Welcome page of Interactive Clustering Web Application." width="60%"/>
-	<figcaption style="font-style: italic; font-size: smaller; color:grey">Welcome page of Interactive Clustering Web Application.</figcaption>
-</figure>
+</p>
 
 ### Description of studies
 
@@ -57,10 +60,11 @@ Several studies are provided here:
 8. `annotation errors and conflicts fix`: Aims to **evaluate errors impact** and **verify conflicts fix importance** on labeling.
 9. `annotation subjectivity`: Aims to **estimate the labeling difference impact** on clustering results.
 
-<figure align="center">
+<p align="center">
+	<i style="font-size: smaller; color:grey">Organizational diagram of the different Comparative Studies of Interactive Clustering.</i>
+	</br>
 	<img src="docs/figures/interactive-clustering-comparative-study.png" alt="Organizational diagram of the different comparative studies of Interactive Clustering." width="60%"/>
-	<figcaption style="font-style: italic; font-size: smaller; color:grey">Organizational diagram of the different Comparative Studies of Interactive Clustering.</figcaption>
-</figure>
+</p>
 
 > All these studies are used in the following PhD report : [Schild, 2024 (in press)](https://github.com/erwanschild/interactive-clustering-phd-report)
 

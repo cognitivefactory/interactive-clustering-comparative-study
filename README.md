@@ -228,23 +228,23 @@ To check code quality of scripts and notebooks:
 ## References
 
 - **Interactive Clustering**:
-	- PhD report: `Schild, E. (2024, in press). De l'Importance de Valoriser l'Expertise Humaine dans l'Annotation : Application à la Modélisation de Textes en Intentions à l'aide d'un Clustering Interactif. Université de Lorraine.`
-    - First presentation: `Schild, E., Durantin, G., Lamirel, J.C., & Miconi, F. (2021). Conception itérative et semi-supervisée d'assistants conversationnels par regroupement interactif des questions. In EGC 2021 - 21èmes Journées Francophones Extraction et Gestion des Connaissances. Edition RNTI. <hal-03133007>.`
-    - Theoretical study: `Schild, E., Durantin, G., Lamirel, J., & Miconi, F. (2022). Iterative and Semi-Supervised Design of Chatbots Using Interactive Clustering. International Journal of Data Warehousing and Mining (IJDWM), 18(2), 1-19. http://doi.org/10.4018/IJDWM.298007. <hal-03648041>.`
-    - Methodological discussion: `Schild, E., Durantin, G., & Lamirel, J.C. (2021). Concevoir un assistant conversationnel de manière itérative et semi-supervisée avec le clustering interactif. In Atelier - Fouille de Textes - Text Mine 2021 - En conjonction avec EGC 2021. <hal-03133060>.`
-	- Interactive Clustering implementation: `Schild, E. (2021). cognitivefactory/interactive-clustering. Zenodo. https://doi.org/10.5281/zenodo.4775251`
-	- Interactive Clustering web application: `SCHILD, E., TTremble & Clementine-Msk. (2022). cognitivefactory/interactive-clustering-gui. Zenodo. https://doi.org/10.5281/zenodo.4775270`
-	- Features Maximization Metric implementation: `SCHILD, E. (2023). Cognitivefactory/Features-Maximization-Metric. Zenodo. https://doi.org/10.5281/zenodo.7646382`
+	- PhD report: `Schild, E. (2024, in press). De l'Importance de Valoriser l'Expertise Humaine dans l'Annotation : Application à la Modélisation de Textes en Intentions à l'aide d'un Clustering Interactif. Université de Lorraine.` ;
+    - First presentation: `Schild, E., Durantin, G., Lamirel, J.C., & Miconi, F. (2021). Conception itérative et semi-supervisée d'assistants conversationnels par regroupement interactif des questions. In EGC 2021 - 21èmes Journées Francophones Extraction et Gestion des Connaissances. Edition RNTI. https://hal.science/hal-03133007.` ;
+    - Theoretical study: `Schild, E., Durantin, G., Lamirel, J., & Miconi, F. (2022). Iterative and Semi-Supervised Design of Chatbots Using Interactive Clustering. International Journal of Data Warehousing and Mining (IJDWM), 18(2), 1-19. http://doi.org/10.4018/IJDWM.298007. https://hal.science/hal-03648041.` ;
+    - Methodological discussion: `Schild, E., Durantin, G., & Lamirel, J.C. (2021). Concevoir un assistant conversationnel de manière itérative et semi-supervisée avec le clustering interactif. In Atelier - Fouille de Textes - Text Mine 2021 - En conjonction avec EGC 2021. https://hal.science/hal-03133060.` ;
+	- Interactive Clustering implementation: `Schild, E. (2021). cognitivefactory/interactive-clustering. Zenodo. https://doi.org/10.5281/zenodo.4775251` ;
+	- Interactive Clustering web application: `Schild, E. (2022). cognitivefactory/interactive-clustering-gui. Zenodo. https://doi.org/10.5281/zenodo.4775270` ;
+	- Features Maximization Metric implementation: `Schild, E. (2023). Cognitivefactory/Features-Maximization-Metric. Zenodo. https://doi.org/10.5281/zenodo.7646382`
 
 - **Datasets**:
 	- Bank cards management: `Schild, E. (2021). French trainset for chatbots dealing with usual requests on bank cards [Data set]. Zenodo. http://doi.org/10.5281/zenodo.4769949` ;
-	- MLSUM: `Erwan SCHILD, & Marie ADLER. (2023). Subset of 'MLSUM: The Multilingual Summarization Corpus' for constraints annotation experiment (1.0.0 [subset: fr+train+filtered]) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.8399301`.
+	- MLSUM: `Schild, E. & Adler, M. (2023). Subset of 'MLSUM: The Multilingual Summarization Corpus' for constraints annotation experiment (1.0.0 [subset: fr+train+filtered]) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.8399301`.
 
 - **Experimental protocol**:
-	- _Jupyter Notebooks_: `Kluyver, T., Ragan-Kelley, B., Pérez, F., Granger, B., Bussonnier, M., Frederic, J., Kelley, K., Hamrick, J., Grout, J., Corlay, S., Ivanov, P., Avila, D., Abdalla, S., Willing, C. & Jupyter development team, (2016) Jupyter Notebooks - a publishing format for reproducible computational workflows. In Positioning and Power in Academic Publishing: Players, Agents and Agendas. IOS Press. pp. 87-90 . https://doi.org/10.3233/978-1-61499-649-1-87`.
+	- _Jupyter Notebooks_: `Kluyver, T., Ragan-Kelley, B., Pérez, F., Granger, B., Bussonnier, M., Frederic, J., Kelley, K., Hamrick, J., Grout, J., Corlay, S., Ivanov, P., Avila, D., Abdalla, S., Willing, C. & Jupyter development team, (2016) Jupyter Notebooks - a publishing format for reproducible computational workflows. In Positioning and Power in Academic Publishing: Players, Agents and Agendas. IOS Press. pp. 87-90 . https://doi.org/10.3233/978-1-61499-649-1-87` ;
 	- _Sklearn_: `Buitinck, L., Louppe, G., Blondel, M., Pedregosa, F., Mueller, A., Grisel, O., Niculae, V., Prettenhofer, P., Gramfort, A., Grobler, J., Layton, R., Vanderplas, J., Joly, A., Holt, B., & Varoquaux, G. (2013). API design for machine learning software: experiments from the scikit-learn project. ArXiv, abs/1309.0238` ;
-	- _statsmodel_ `Seabold, S., & Perktold, J. (2010). Statsmodels : Econometric and Statistical Modeling with Python, 92-96. https://doi.org/10.25080/Majora-92bf1922-011`
-	- _simpledorff_: `Perry, T. (2021). LightTag : Text Annotation Platform. Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing : System Demonstrations, 20-27. https://aclanthology.org/2021.emnlp-demo.3`
+	- _statsmodel_ `Seabold, S., & Perktold, J. (2010). Statsmodels : Econometric and Statistical Modeling with Python, 92-96. https://doi.org/10.25080/Majora-92bf1922-011` ;
+	- _simpledorff_: `Perry, T. (2021). LightTag : Text Annotation Platform. Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing : System Demonstrations, 20-27. https://aclanthology.org/2021.emnlp-demo.3` ;
 	- _matplotlib_: `Caswell, T. A., Droettboom, M., Lee, A., Sales de Andrade, E., Hunter, J., Hoffmann, T., & Ivanov, P. (2021). matplotlib/matplotlib: REL: v3.3.4 (Version v3.3.4). Zenodo. https://doi.org/10.5281/zenodo.4475376` ;
 	- _Python_: `Van Rossum, G., & Drake, F. L. (2009). Python 3 Reference Manual (CreateSpace).`
 	- _R_: `Team, R. C. (2017). R : A language and environment for statistical computing. R Foundation for Statistical Computing. Vienna, Austria. https://www.R-project.org/`
